@@ -1,0 +1,3 @@
+requests
+unittest
+mysql-connector-python
