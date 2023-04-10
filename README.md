@@ -5,7 +5,7 @@ mindsdb-statuses hosts integration tests to ensure the daily availability and pr
 
 ## Table of Contents
 
-* [Getting Started](/#getting-started)
+* [Getting Started](#getting-started)
     * Prerequisites
     * Installation
 * [Running the Tests](#running-the-tests)
@@ -17,8 +17,8 @@ These instructions will guide you through setting up the project and running the
 
 ### Prerequisites
 
-    * Python 3.7 or higher
-    * An active MindsDB Cloud account and InstaStatus API key
+* Python 3.7.x or higher
+* An active MindsDB Cloud account and InstaStatus API key
 
 ## Installation
 
