@@ -1,0 +1,39 @@
+name: MindsDB Cloud Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Run MindsDB Cloud tests
+      env:
+        API_KEY: ${{ secrets.API_KEY }}
+        API_BASE_URL: ${{ secrets.API_BASE_URL }}
+        CLOUD_USER:  ${{ secrets.CLOUD_USER }}
+        CLOUD_PASS:  ${{ secrets.CLOUD_PASS }}
+      run: |
+        source venv/bin/activate
+        cd cloud_mysql_api
+        python -m unittest test_cloud.py
