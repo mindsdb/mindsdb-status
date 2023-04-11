@@ -1,12 +1,9 @@
 name: MindsDB Cloud Tests
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  # Triggers the workflow every 5 minutes
+  schedule:
+    - cron: "*/5 * * * *"
 
 jobs:
   run_tests:
