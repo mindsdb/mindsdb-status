@@ -1,7 +1,8 @@
 import unittest
 import mysql.connector
 from mysql.connector import errorcode
-from cloud_mysql_api.insta_status import InstatusClient as ins
+from utils.instatus import InstatusClient as ins
+from utils.template import IncidentTemplate as template
 import os
 
 
@@ -15,20 +16,22 @@ class MySQLAPITest(unittest.TestCase):
         Set up the MySQL connection before each test. Handles errors and prints appropriate messages.
         """
         try:
+            self.incident = ins()
+            self.template = template()
             self.cnx = mysql.connector.connect(
-                user=os.environ.get('CLOUD_USER'),
-                password=os.environ.get('CLOUD_PASS'),
+                user=os.environ.get('MINDSDB_CLOUD_USER'),
+                password=os.environ.get('MINDSDB_CLOUD_PASS'),
                 host='cloud.mindsdb.com',
                 database='mindsdb'
             )
         except mysql.connector.Error as err:
+            cloud_temp = self.template.get_website_template()
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
-                print("Something is wrong with your user name or password")
+                self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
             elif err.errno == errorcode.ER_BAD_DB_ERROR:
                 print("Database does not exist")
             else:
-                print(err)
-
+                self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
     def tearDown(self):
         """
         Close the MySQL connection after each test.
@@ -41,11 +44,16 @@ class MySQLAPITest(unittest.TestCase):
         """
         cursor = self.cnx.cursor()
         query = "SHOW TABLES"
-        cursor.execute(query)
-
-        results = cursor.fetchall()
-        self.assertIsNotNone(results)
-        cursor.close()
+        try:
+            cursor.execute(query)
+            result = cursor.fetchall()
+            self.assertIsNotNone(result)
+            cursor.close()
+        except Exception as err:
+            #TODO: map components id per incident
+            cloud_temp = self.template.get_website_template()
+            self.inc.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
+  
 
     def test_models_table_exist(self):
         """
@@ -59,13 +67,8 @@ class MySQLAPITest(unittest.TestCase):
             self.assertIsNotNone(result)
             cursor.close()
         except Exception as err:
-            inc = ins()
-            #TODO: map components id per incident
-            inc.report_incident("cl8nll9f7106187olof1m17eg17",
-                                "MindsDB Cloud incident",
-                                "We're currently investigating an issue with the Website",
-                                "cl8nll9fr106215olofubk3u09d", 
-                                "INVESTIGATING")
+            cloud_temp = self.template.get_website_template()
+            self.inc.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
 if __name__ == '__main__':
