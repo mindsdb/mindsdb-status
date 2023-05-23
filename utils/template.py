@@ -53,3 +53,20 @@ class IncidentTemplate():
             ]
         }
         return incident
+    
+    def get_mysql_template(self):
+        incident = {
+            "name": "MindsDB MySQL Integration Incident",
+            "message": "We're currently investigating an issue with the MySQL Integration",
+            "components": ["clg3rmxx157961bdoi3zyenisn"],
+            "status": "INVESTIGATING",
+            "started": str(datetime.now()),
+            "notify": True,
+            "statuses": [
+                {
+                    "id": "clg3rmxx157961bdoi3zyenisn",
+                    "status": "MAJOROUTAGE"
+                }
+            ]
+        }
+        return incident

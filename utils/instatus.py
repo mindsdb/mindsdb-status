@@ -45,7 +45,7 @@ class InstatusClient:
         """
         
         response = requests.post(
-            f"{self.api_base_url}v1/{page_id}/incidents",
+            f"{self.api_base_url}/v1/{page_id}/incidents",
             json=template,
             headers=self.headers
         )
