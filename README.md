@@ -63,13 +63,18 @@ Set the necessary environment variables (replace your_api_key with your MindsDB 
 * On Windows:
 
 ```
-set API_KEY=your_api_key
+set MINDSDB_CLOUD_USER=
+set MINDSDB_CLOUD_PASS=
+set INSTA_API_KEY=
+set INSTA_API_BASE_URL
 ```
 * On macOS and Linux:
 
 ```
-export API_KEY=your_api_key
-```
+export MINDSDB_CLOUD_USER=
+export MINDSDB_CLOUD_PASS=
+export INSTA_API_KEY=
+export INSTA_API_BASE_URL```
 
 Run the tests:
 
@@ -77,6 +82,11 @@ Run the tests:
 python -m unittest
 ```
 
+or to run specific set of tests e.g for connectors:
+
+```
+python -m unittest discover connectors/
+```
 ## License
 
 mindsdb-statuses is licensed under the MIT License.

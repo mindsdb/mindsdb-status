@@ -32,6 +32,7 @@ class MySQLAPITest(unittest.TestCase):
                 print("Database does not exist")
             else:
                 self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
+
     def tearDown(self):
         """
         Close the MySQL connection after each test.
@@ -52,7 +53,7 @@ class MySQLAPITest(unittest.TestCase):
         except Exception as err:
             #TODO: map components id per incident
             cloud_temp = self.template.get_website_template()
-            self.inc.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
+            self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
   
 
     def test_models_table_exist(self):
@@ -68,7 +69,7 @@ class MySQLAPITest(unittest.TestCase):
             cursor.close()
         except Exception as err:
             cloud_temp = self.template.get_website_template()
-            self.inc.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
+            self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
 if __name__ == '__main__':
