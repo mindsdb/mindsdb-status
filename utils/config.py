@@ -24,6 +24,14 @@ MARIADB_CONFIG = {
     "database": "mocked_database"
 }
 
+SINGLESTORE_CONFIG = {
+    "user": "mocked_user",
+    "password": "mocked_password",
+    "host": "mocked_host",
+    "port": "mocked_port",
+    "database": "mocked_database"
+}
+
 SNOWFLAKE_CONFIG = {
     "host": "mocked_host",
     "user": "mocked_user",
