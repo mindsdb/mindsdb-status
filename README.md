@@ -47,9 +47,11 @@ venv\Scripts\activate
 ```
 
 * On macOS and Linux:
+
 ```
 source venv/bin/activate
 ```
+
 Install the required dependencies:
 
 ```
@@ -68,13 +70,15 @@ set MINDSDB_CLOUD_PASS=
 set INSTA_API_KEY=
 set INSTA_API_BASE_URL
 ```
+
 * On macOS and Linux:
 
 ```
 export MINDSDB_CLOUD_USER=
 export MINDSDB_CLOUD_PASS=
 export INSTA_API_KEY=
-export INSTA_API_BASE_URL```
+export INSTA_API_BASE_URL
+```
 
 Run the tests:
 
@@ -87,6 +91,7 @@ or to run specific set of tests e.g for connectors:
 ```
 python -m unittest discover connectors/
 ```
+
 ## License
 
 mindsdb-statuses is licensed under the MIT License.
