@@ -52,6 +52,13 @@ SNOWFLAKE_CONFIG = {
     "port": "mocked_port"
 }
 
+DATABRICKS_CONFIG = {
+    "server_hostname": "mocked_server_hostname",
+    "http_path": "mocked_http_path",
+    "access_token": "mocked_access_token",
+    "schema": "mocked_schema"
+}
+
 
 def generate_random_db_name(base_name: str, min_value: int = 1000, max_value: int = 9999) -> str:
     """
