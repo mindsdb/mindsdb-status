@@ -31,7 +31,7 @@ class QueryGenerator:
         :param parameters: A dictionary of parameters for the engine.
         :return: The generated SQL query as a string.
         """
-        parameter_str = ",\n  ".join([f'"{key}": "{value}"' for key, value in parameters.items()])
+        parameter_str = ",\n  ".join([f"{key} = '{value}'" for key, value in parameters.items()])
         query = f"""CREATE ML ENGINE {ml_engine_name}
                     FROM '{engine}',
                     USING
