@@ -24,8 +24,7 @@ class TestHuggingFaceAPIConnection(unittest.TestCase):
 
     def tearDown(self):
         """
-        Clean up the test environment by closing the connection.
-        to the MindsDB SQL API.
+        Clean up the test environment by closing the connection to the MindsDB SQL API.
         """
         if self.connection.is_connected():
             self.connection.close()
