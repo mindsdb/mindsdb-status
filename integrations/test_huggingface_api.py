@@ -43,7 +43,7 @@ class TestHuggingFaceAPIConnection(unittest.TestCase):
         try:
             cursor = self.connection.cursor()
             random_db_name = generate_random_db_name("hf_api_engine")
-            query = self.query_generator.create_database_query(
+            query = self.query_generator.create_ml_engine_query(
                         random_db_name,
                         "huggingface_api",
                          HUGGINGFACE_API_CONFIG
