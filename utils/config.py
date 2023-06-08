@@ -52,6 +52,10 @@ SNOWFLAKE_CONFIG = {
     "port": "mocked_port"
 }
 
+HUGGINGFACE_API_CONFIG = {
+    "api_key": "mocked_api_key"
+}
+
 
 def generate_random_db_name(base_name: str, min_value: int = 1000, max_value: int = 9999) -> str:
     """
