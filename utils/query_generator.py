@@ -32,9 +32,9 @@ class QueryGenerator:
         :return: The generated SQL query as a string.
         """
         parameter_str = ",\n  ".join([f"{key} = '{value}'" for key, value in parameters.items()])
-        query = f"""CREATE ML ENGINE {ml_engine_name}
-                    FROM '{engine}',
+        query = f"""CREATE ML_ENGINE {ml_engine_name}
+                    FROM {engine}
                     USING
-                    \t{parameter_str}
-                }};"""
+                    \t{parameter_str};
+"""
         return query
