@@ -33,7 +33,7 @@ class QueryGenerator:
         """
         parameter_str = ",\n  ".join([f'"{key}": "{value}"' for key, value in parameters.items()])
         query = f"""CREATE ML ENGINE {ml_engine_name}
-                    WITH ENGINE = '{engine}',
+                    FROM '{engine}',
                     USING
                     \t{parameter_str}
                 }};"""
