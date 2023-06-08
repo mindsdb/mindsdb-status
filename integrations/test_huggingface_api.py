@@ -35,3 +35,25 @@ class TestHuggingFaceAPIConnection(unittest.TestCase):
         Test that the connection to the MindsDB SQL API is established.
         """
         assert self.connection.is_connected()
+
+    def test_execute_query(self):
+        """
+        Create new HuggingFace API ML Engine.
+        """
+        try:
+            cursor = self.connection.cursor()
+            random_db_name = generate_random_db_name("hf_api_engine")
+            query = self.query_generator.create_database_query(
+                        random_db_name,
+                        "huggingface_api",
+                         HUGGINGFACE_API_CONFIG
+                    )
+            cursor.execute(query)
+            cursor.close()
+        except Exception as err:
+            self.logger.exception(err)
+            assert False, f"Error executing query: {err}"
+
+
+if __name__ == "__main__":
+    unittest.main()
