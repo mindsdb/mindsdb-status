@@ -7,13 +7,12 @@ from utils.log import setup_logger
 
 class TestDatabricksConnection(unittest.TestCase):
     """
-    Test class for testing the Databricks datasource using MindsDB SQL API
+    Test class for testing the Databricks datasource using MindsDB SQL API.
     """
 
     def setUp(self):
         """
-        Set up the test environment by establishing a connection
-        to the MindsDB SQL API.
+        Set up the test environment by establishing a connection to the MindsDB SQL API.
         """
         self.query_generator = query()
         self.logger = setup_logger(__name__)
@@ -25,21 +24,20 @@ class TestDatabricksConnection(unittest.TestCase):
 
     def tearDown(self):
         """
-        Clean up the test environment by closing the connection
-        to the MindsDB SQL API.
+        Clean up the test environment by closing the connection to the MindsDB SQL API.
         """
         if self.connection.is_connected():
             self.connection.close()
 
     def test_connection_established(self):
         """
-        Test that the connection to the MindsDB SQL API is established
+        Test that the connection to the MindsDB SQL API is established.
         """
         assert self.connection.is_connected()
 
     def test_execute_query(self):
         """
-        Create new ClickHouse Datasource
+        Create a new Databricks Datasource.
         """
         try:
             cursor = self.connection.cursor()
