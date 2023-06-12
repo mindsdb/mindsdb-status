@@ -63,6 +63,10 @@ HUGGINGFACE_API_CONFIG = {
     "api_key": "mocked_api_key"
 }
 
+GOOGLE_SHEETS_CONFIG = {
+    "spreadsheet_id": "mocked_spreadsheet_id",
+    "sheet_name": "mocked_sheet_name"
+}
 
 def generate_random_db_name(base_name: str, min_value: int = 1000, max_value: int = 9999) -> str:
     """
