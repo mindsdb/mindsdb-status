@@ -68,6 +68,15 @@ GOOGLE_SHEETS_CONFIG = {
     "sheet_name": "mocked_sheet_name"
 }
 
+AURORA_MYSQL_CONFIG = {
+    "db_engine": "mysql",
+    "host": "mocked_host",
+    "port": "mocked_port",
+    "user": "mocked_user",
+    "password": "mocked_password",
+    "database": "mocked_database"
+}
+
 def generate_random_db_name(base_name: str, min_value: int = 1000, max_value: int = 9999) -> str:
     """
     Generates a random database name by appending a random number to the base name.
