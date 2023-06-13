@@ -1,7 +1,7 @@
 import unittest
 import mysql.connector
 from utils.query_generator import QueryGenerator as query
-from utils.config import MYSQL_API_CONFIG, AURORA_MYSQL_CONFIG, AURORA_POSTGRESQL_CONFIG, generate_random_db_name
+from utils.config import MYSQL_API_CONFIG, AURORA_MYSQL_CONFIG, generate_random_db_name
 from utils.log import setup_logger
 
 
@@ -44,7 +44,7 @@ class TestAmazonAuroraConnection(unittest.TestCase):
             random_db_name = generate_random_db_name("aurora_mysql_datasource")
             query = self.query_generator.create_database_query(
                         random_db_name,
-                        "sheets",
+                        "aurora",
                          AURORA_MYSQL_CONFIG
                     )
             cursor.execute(query)
