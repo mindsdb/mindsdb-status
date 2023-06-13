@@ -1,7 +1,7 @@
 import unittest
 import mysql.connector
 from utils.query_generator import QueryGenerator as query
-from utils.config import MYSQL_API_CONFIG, AURORA_MYSQL_CONFIG, generate_random_db_name
+from utils.config import MYSQL_API_CONFIG, AURORA_MYSQL_CONFIG, AURORA_POSTGRESQL_CONFIG, generate_random_db_name
 from utils.log import setup_logger
 
 
@@ -46,6 +46,24 @@ class TestAmazonAuroraConnection(unittest.TestCase):
                         random_db_name,
                         "aurora",
                          AURORA_MYSQL_CONFIG
+                    )
+            cursor.execute(query)
+            cursor.close()
+        except Exception as err:
+            self.logger.exception(err)
+            assert False, f"Error executing query: {err}"
+
+    def test_execute_query_for_postgresql(self):
+        """
+        Create a new Amazon Aurora PostgreSQL Datasource.
+        """
+        try:
+            cursor = self.connection.cursor()
+            random_db_name = generate_random_db_name("aurora_postgresql_datasource")
+            query = self.query_generator.create_database_query(
+                        random_db_name,
+                        "aurora",
+                         AURORA_POSTGRESQL_CONFIG
                     )
             cursor.execute(query)
             cursor.close()
