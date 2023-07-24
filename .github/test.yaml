@@ -26,10 +26,10 @@ jobs:
 
     - name: Run MindsDB Cloud tests
       env:
-        API_KEY: ${{ secrets.API_KEY }}
-        API_BASE_URL: ${{ secrets.API_BASE_URL }}
-        CLOUD_USER:  ${{ secrets.CLOUD_USER }}
-        CLOUD_PASS:  ${{ secrets.CLOUD_PASS }}
+        INSTA_API_KEY: ${{ secrets.INSTA_API_KEY }}
+        INSTA_API_BASE_URL: ${{ secrets.INSTA_API_BASE_URL }}
+        MINDSDB_CLOUD_USER:  ${{ secrets.MINDSDB_CLOUD_USER }}
+        MINDSDB_CLOUD_PASS:  ${{ secrets.MINDSDB_CLOUD_PASS }}
       run: |
         source venv/bin/activate
         cd cloud_mysql_api
