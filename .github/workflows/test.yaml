@@ -32,4 +32,4 @@ jobs:
         MINDSDB_CLOUD_PASS:  ${{ secrets.MINDSDB_CLOUD_PASS }}
       run: |
         source venv/bin/activate
-        python -m unittest cloud_mysql_api/test_cloud.py
+        python -m unittest cloud_sql_api/test_cloud.py
