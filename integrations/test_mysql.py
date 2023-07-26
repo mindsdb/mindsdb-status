@@ -4,7 +4,7 @@ from mysql.connector import errorcode
 from utils.query_generator import QueryGenerator as query
 from utils.instatus import InstatusClient as ins
 from utils.template import IncidentTemplate as template
-from utils.config import MYSQL_API_CONFIG, MYSQL_CONFIG, generate_random_db_name
+from utils.config import MYSQL_API_CONFIG, get_value_from_json_env_var, generate_random_db_name
 
 
 class TestMySQLConnection(unittest.TestCase):
@@ -54,10 +54,11 @@ class TestMySQLConnection(unittest.TestCase):
         try:
             cursor = self.connection.cursor()
             random_db_name = generate_random_db_name("mysql_datasource")
+            mysql_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'mysql')
             query = self.query_generator.create_database_query(
                         random_db_name,
                         "mysql",
-                         MYSQL_CONFIG
+                         mysql_config
                     )
             cursor.execute(query)
             cursor.close()
