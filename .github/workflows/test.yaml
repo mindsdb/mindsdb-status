@@ -3,7 +3,7 @@ name: MindsDB Cloud Tests
 on:
   # Triggers the workflow every day at 1 and 13:00 UTC
   schedule:
-    - cron:  '0 1,13 * * *'
+    - cron:  '30 1,13 * * *'
 
 jobs:
   run_tests:
