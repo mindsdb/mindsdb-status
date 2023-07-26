@@ -3,6 +3,7 @@ import mysql.connector
 from mysql.connector import errorcode
 from utils.instatus import InstatusClient as ins
 from utils.template import IncidentTemplate as template
+from utils.config import get_value_from_json_env_var
 import os
 
 
@@ -18,9 +19,10 @@ class MySQLAPITest(unittest.TestCase):
         try:
             self.incident = ins()
             self.template = template()
+            config = get_value_from_json_env_var('INTEGRATIONS_CONFIG', 'mindsdb_cloud')
             self.cnx = mysql.connector.connect(
-                user=os.environ.get('MINDSDB_CLOUD_USER'),
-                password=os.environ.get('MINDSDB_CLOUD_PASS'),
+                user=config['user'],
+                password=config['password'],
                 host='cloud.mindsdb.com',
                 database='mindsdb'
             )
