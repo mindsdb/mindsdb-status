@@ -1,7 +1,7 @@
 import unittest
 import mysql.connector
 from utils.query_generator import QueryGenerator as query
-from utils.config import MYSQL_API_CONFIG, POSTGRESQL_CONFIG, generate_random_db_name
+from utils.config import MYSQL_API_CONFIG, get_value_from_json_env_var, generate_random_db_name
 from utils.log import setup_logger
 
 
@@ -43,11 +43,12 @@ class TestPostgreSQLConnection(unittest.TestCase):
         """
         try:
             cursor = self.connection.cursor()
+            psql_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'postgresql')
             random_db_name = generate_random_db_name("postgresql_datasource")
             query = self.query_generator.create_database_query(
                         random_db_name,
-                        "postgresql",
-                         POSTGRESQL_CONFIG
+                        "postgres",
+                         psql_config
                     )
             cursor.execute(query)
             cursor.close()
