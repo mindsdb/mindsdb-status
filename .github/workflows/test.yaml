@@ -26,10 +26,7 @@ jobs:
 
     - name: Run MindsDB Cloud tests
       env:
-        INSTA_API_KEY: ${{ secrets.INSTA_API_KEY }}
-        INSTA_API_BASE_URL: ${{ secrets.INSTA_API_BASE_URL }}
-        MINDSDB_CLOUD_USER:  ${{ secrets.MINDSDB_CLOUD_USER }}
-        MINDSDB_CLOUD_PASS:  ${{ secrets.MINDSDB_CLOUD_PASS }}
+        INTEGRATIONS_CONFIG=: ${{ secrets.INTEGRATIONS_CONFIG }}
       run: |
         source venv/bin/activate
         python -m unittest discover -s cloud_sql_api
