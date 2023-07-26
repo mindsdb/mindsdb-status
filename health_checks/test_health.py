@@ -33,7 +33,7 @@ class HealthCheckTests(unittest.TestCase):
         """
         url = "https://mindsdb.com/"
         response = requests.get(url)
-        if response.status_code is not 401:
+        if response.status_code is not 200:
             web_temp = self.template.get_website_template()
             self.incident.report_incident("cl8nll9g0106225olofc95s0wcm", web_temp)
 
