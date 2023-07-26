@@ -3,7 +3,7 @@ name: MindsDB Cloud Tests
 on:
   # Triggers the workflow every day at 1 and 13:00 UTC
   schedule:
-    - cron:  '30 1,13 * * *'
+    - cron:  '0 2,14 * * *'
 
 jobs:
   run_tests:
@@ -26,7 +26,7 @@ jobs:
 
     - name: Run MindsDB Cloud tests
       env:
-        INTEGRATIONS_CONFIG=: ${{ secrets.INTEGRATIONS_CONFIG }}
+        INTEGRATIONS_CONFIG: ${{ secrets.INTEGRATIONS_CONFIG }}
       run: |
         source venv/bin/activate
         python -m unittest discover -s cloud_sql_api
