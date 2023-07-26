@@ -1,7 +1,7 @@
 import unittest
 import mysql.connector
 from utils.query_generator import QueryGenerator as query
-from utils.config import MYSQL_API_CONFIG, get_value_from_json_env_var, generate_random_db_name
+from utils.config import  get_value_from_json_env_var, generate_random_db_name
 from utils.log import setup_logger
 
 
@@ -18,7 +18,8 @@ class TestPostgreSQLConnection(unittest.TestCase):
         self.query_generator = query()
         self.logger = setup_logger(__name__)
         try:
-            self.connection = mysql.connector.connect(**MYSQL_API_CONFIG)
+            config = get_value_from_json_env_var('INTEGRATIONS_CONFIG', 'mindsdb_cloud')
+            self.connection = mysql.connector.connect(**config)
         except mysql.connector.Error as err:
             self.logger.error('Connection to SQL API Failed')
             self.logger.exception(err)

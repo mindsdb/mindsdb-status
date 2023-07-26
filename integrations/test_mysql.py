@@ -4,7 +4,7 @@ from mysql.connector import errorcode
 from utils.query_generator import QueryGenerator as query
 from utils.instatus import InstatusClient as ins
 from utils.template import IncidentTemplate as template
-from utils.config import MYSQL_API_CONFIG, get_value_from_json_env_var, generate_random_db_name
+from utils.config import get_value_from_json_env_var, generate_random_db_name
 
 
 class TestMySQLConnection(unittest.TestCase):
@@ -21,7 +21,8 @@ class TestMySQLConnection(unittest.TestCase):
         self.template = template()
         self.query_generator = query()
         try:
-            self.connection = mysql.connector.connect(**MYSQL_API_CONFIG)
+            config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", "mindsdb_cloud")
+            self.connection = mysql.connector.connect(**config)
         except mysql.connector.Error as err:
             cloud_temp = self.template.get_mysql_template()
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:

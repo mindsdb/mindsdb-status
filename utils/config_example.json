@@ -1,0 +1,26 @@
+{
+        "postgresql": {
+            "user": "<your_postgres_username>",
+            "password": "<your_postgres_password>",
+            "host": "<your_postgres_host>",
+            "port": "<your_postgres_port>",
+            "database": "<your_postgres_database>",
+            "schema": "<your_postgres_schema>"
+        },
+        "mysql": {
+            "user": "<your_mysql_username>",
+            "password": "<your_mysql_password>",
+            "host": "<your_mysql_host>",
+            "port": "<your_mysql_port>",
+            "database": "<your_mysql_database>"
+        },
+        "instatus": {
+            "api_key": "<your_instatus_api_key>",
+            "base_url": "<your_instatus_base_url>"
+        },
+        "mindsdb_cloud": {
+            "user": "<your_mindsdb_cloud_username>",
+            "password": "<your_mindsdb_cloud_password>"
+        }
+    }
+    
