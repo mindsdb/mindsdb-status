@@ -54,7 +54,7 @@ class MySQLAPITest(unittest.TestCase):
             cursor.close()
         except Exception as err:
             #TODO: map components id per incident
-            cloud_temp = self.template.get_website_template()
+            cloud_temp = self.template.get_cloud_template()
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
   
 
@@ -70,7 +70,7 @@ class MySQLAPITest(unittest.TestCase):
             self.assertIsNotNone(result)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_website_template()
+            cloud_temp = self.template.get_cloud_template()
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
