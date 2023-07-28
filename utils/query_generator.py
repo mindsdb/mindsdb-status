@@ -16,9 +16,9 @@ class QueryGenerator:
         parameter_str = ",\n  ".join([f'"{key}": "{value}"' for key, value in parameters.items()])
         query = f"""CREATE DATABASE {database_name}
                     WITH ENGINE = '{engine}',
-                    PARAMETERS = {{
-                    {parameter_str}
-                }};"""
+                        PARAMETERS = {{
+                        {parameter_str}
+                    }};"""
         return query
 
     @staticmethod
@@ -31,10 +31,28 @@ class QueryGenerator:
         :param parameters: A dictionary of parameters for the engine.
         :return: The generated SQL query as a string.
         """
+        parameters = parameters or {}
         parameter_str = ",\n  ".join([f"{key} = '{value}'" for key, value in parameters.items()])
-        query = f"""CREATE ML_ENGINE {ml_engine_name}
-                    FROM {engine}
-                    USING
-                    \t{parameter_str};
-"""
+        using_clause = f"\nUSING\n\t{parameter_str};" if parameters else ""
+            
+        return f"""CREATE ML_ENGINE {ml_engine_name}
+                        FROM {engine}{using_clause};
+                    """
+
+    @staticmethod
+    def create_model(model_name: str, target_var: str, parameters: dict) -> str:
+        """
+        Generate a CREATE ML ENGINE query with the given parameters.
+
+        :param ml_engine_name: The name of the ML Engine to create.
+        :param engine: The ML Engine to use.
+        :param parameters: A dictionary of parameters for the engine.
+        :return: The generated SQL query as a string.
+        """
+        parameter_str = ",\n  ".join([f'"{key}": "{value}"' for key, value in parameters.items()])
+        query = f"""CREATE MODEL {model_name} 
+                    PREDICT {target_var}
+                    USING                        
+                        {parameter_str}
+                    ;"""
         return query

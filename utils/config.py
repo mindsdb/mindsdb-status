@@ -39,10 +39,6 @@ DATABRICKS_CONFIG = {
     "schema": "mocked_schema"
 }
 
-HUGGINGFACE_API_CONFIG = {
-    "api_key": "mocked_api_key"
-}
-
 GOOGLE_SHEETS_CONFIG = {
     "spreadsheet_id": "mocked_spreadsheet_id",
     "sheet_name": "mocked_sheet_name"
