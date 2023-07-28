@@ -1,6 +1,7 @@
 import requests
-from datetime import datetime
 import os
+from utils.config import get_value_from_json_env_var
+
 
 
 class InstatusClient:
@@ -12,8 +13,9 @@ class InstatusClient:
         """
         Initialize the InstatusClient with the API key and base URL retrieved from environment variables.
         """
-        self.api_key = os.environ.get('INSTA_API_KEY')
-        self.api_base_url = os.environ.get('INSTA_API_BASE_URL')
+        config  = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'instatus')
+        self.api_key = config["api_key"]
+        self.api_base_url =  config["base_url"]
         self.headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json"
