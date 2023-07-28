@@ -24,7 +24,7 @@ class TestMySQLConnection(unittest.TestCase):
             config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", "mindsdb_cloud")
             self.connection = mysql.connector.connect(**config)
         except mysql.connector.Error as err:
-            cloud_temp = self.template.get_mysql_template()
+            cloud_temp = self.template.get_cloud_sql_api_template()
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
                 self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
             elif err.errno == errorcode.ER_BAD_DB_ERROR:
@@ -45,7 +45,7 @@ class TestMySQLConnection(unittest.TestCase):
         Test that the connection to the MindsDB SQL API is established
         """
         if not self.connection.is_connected():
-            cloud_temp = self.template.get_mysql_template()
+            cloud_temp = self.template.get_cloud_sql_api_template()
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
     def test_execute_query(self):
@@ -64,7 +64,7 @@ class TestMySQLConnection(unittest.TestCase):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_mysql_template()
+            cloud_temp = self.template.get_integration_template("MySQL", "clg3rmxx157961bdoi3zyenisn")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
