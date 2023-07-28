@@ -54,17 +54,50 @@ class IncidentTemplate():
         }
         return incident
     
-    def get_mysql_template(self):
+    def get_cloud_sql_api_template(self):
         incident = {
-            "name": "MindsDB MySQL Integration Incident",
-            "message": "We're currently investigating an issue with the MySQL Integration",
-            "components": ["clg3rmxx157961bdoi3zyenisn"],
+            "name": "MindsDB Cloud SQL API Incident",
+            "message": "We're currently investigating an issue with the SQL API",
+            "components": ["clkmhsh0a4312bsoo8m81fcni"],
             "status": "INVESTIGATING",
             "started": str(datetime.now()),
             "notify": True,
             "statuses": [
                 {
-                    "id": "clg3rmxx157961bdoi3zyenisn",
+                    "id": "clkmhsh0a4312bsoo8m81fcni",
+                    "status": "MAJOROUTAGE"
+                }
+            ]
+        }
+        return incident
+    
+    def get_cloud_mongo_api_template(self):
+        incident = {
+            "name": "MindsDB Cloud Mongo API Incident",
+            "message": "We're currently investigating an issue with the Mongo API",
+            "components": ["clkmia49615713bloogwmq41vp"],
+            "status": "INVESTIGATING",
+            "started": str(datetime.now()),
+            "notify": True,
+            "statuses": [
+                {
+                    "id": "clkmia49615713bloogwmq41vp",
+                    "status": "MAJOROUTAGE"
+                }
+            ]
+        }
+        return incident
+    def get_integration_template(self, integration_name, component_id):
+        incident = {
+            "name": f"MindsDB {integration_name} Incident",
+            "message": "We're currently investigating an issue with the {integration_name} integration",
+            "components": [component_id],
+            "status": "INVESTIGATING",
+            "started": str(datetime.now()),
+            "notify": True,
+            "statuses": [
+                {
+                    "id": component_id,
                     "status": "MAJOROUTAGE"
                 }
             ]
