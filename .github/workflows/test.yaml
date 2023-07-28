@@ -30,6 +30,8 @@ jobs:
       run: |
         source venv/bin/activate
         python -m unittest discover -s cloud_sql_api
+        python -m unittest discover -s cloud_mongo_api
         python -m unittest discover -s health_checks
         python -m unittest integrations/test_mysql.py
         python -m unittest integrations/test_postgresql.py 
+        python -m unittest integrations/test_clickhouse.py 
