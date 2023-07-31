@@ -54,3 +54,4 @@ jobs:
         python -m unittest integrations/test_mysql.py
         python -m unittest integrations/test_postgresql.py 
         python -m unittest integrations/test_clickhouse.p
+        python -m unittest integrations/test_mariadb.py
