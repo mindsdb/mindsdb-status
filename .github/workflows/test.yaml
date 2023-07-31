@@ -24,15 +24,33 @@ jobs:
         source venv/bin/activate
         pip install -r requirements.txt
 
-    - name: Run MindsDB Cloud tests
+    - name: Run MindsDB Cloud API Tests
       env:
         INTEGRATIONS_CONFIG: ${{ secrets.INTEGRATIONS_CONFIG }}
       run: |
         source venv/bin/activate
         python -m unittest discover -s cloud_sql_api
         python -m unittest discover -s cloud_mongo_api
+        
+    - name: Run MindsDB Healthchecks
+      env:
+        INTEGRATIONS_CONFIG: ${{ secrets.INTEGRATIONS_CONFIG }}
+      run: |
+        source venv/bin/activate
         python -m unittest discover -s health_checks
+        
+    - name: Run MindsDB ML Integrations Tests
+      env:
+        INTEGRATIONS_CONFIG: ${{ secrets.INTEGRATIONS_CONFIG }}
+      run: |
+        source venv/bin/activate
         python -m unittest discover -s integrations/ml/
+        
+    - name: Run MindsDB DB Integrations Tests
+      env:
+        INTEGRATIONS_CONFIG: ${{ secrets.INTEGRATIONS_CONFIG }}
+      run: |
+        source venv/bin/activate
         python -m unittest integrations/test_mysql.py
         python -m unittest integrations/test_postgresql.py 
-        python -m unittest integrations/test_clickhouse.py 
+        python -m unittest integrations/test_clickhouse.p
