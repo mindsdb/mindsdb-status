@@ -61,7 +61,7 @@ class TestApacheIgniteConnection(unittest.TestCase):
                         random_db_name,
                         "ignite",
                          apache_ignite_config
-                    )
+            )
             cursor.execute(query)
             cursor.close()
         except Exception as err:
