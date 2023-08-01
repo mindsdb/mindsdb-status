@@ -20,7 +20,9 @@
         },
         "mindsdb_cloud": {
             "user": "<your_mindsdb_cloud_username>",
-            "password": "<your_mindsdb_cloud_password>"
+            "password": "<your_mindsdb_cloud_password>",
+            "host": "cloud.mindsdb.com",
+            "database": "mindsdb"
         }
     }
     
