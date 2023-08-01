@@ -53,6 +53,6 @@ jobs:
         source venv/bin/activate
         python -m unittest integrations/test_mysql.py
         python -m unittest integrations/test_postgresql.py 
-        python -m unittest integrations/test_clickhouse.p
+        python -m unittest integrations/test_clickhouse.py
         python -m unittest integrations/test_mariadb.py
         python -m unittest integrations/test_mongodb.py
