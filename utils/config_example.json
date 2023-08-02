@@ -73,6 +73,13 @@
       "database": "mocked_database",
       "protocol": "mocked_protocol",
       "port": "mocked_port"
+    },
+    "singlestore": {
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "database": "mocked_database"
     }
   }
   

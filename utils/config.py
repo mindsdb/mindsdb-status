@@ -2,14 +2,6 @@ import os
 import random
 import json
 
-SINGLESTORE_CONFIG = {
-    "user": "mocked_user",
-    "password": "mocked_password",
-    "host": "mocked_host",
-    "port": "mocked_port",
-    "database": "mocked_database"
-}
-
 DATABRICKS_CONFIG = {
     "server_hostname": "mocked_server_hostname",
     "http_path": "mocked_http_path",
