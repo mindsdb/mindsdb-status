@@ -57,3 +57,4 @@ jobs:
         python -m unittest integrations/test_mariadb.py
         python -m unittest integrations/test_mongodb.py
         python -m unittest integrations/test_amazon_aurora.py
+        python -m unittest integrations/test_snowflake.py

@@ -10,19 +10,6 @@ SINGLESTORE_CONFIG = {
     "database": "mocked_database"
 }
 
-
-SNOWFLAKE_CONFIG = {
-    "host": "mocked_host",
-    "user": "mocked_user",
-    "password": "mocked_password",
-    "account": "mocked_account",
-    "warehouse": "mocked_warehouse",
-    "schema": "mocked_schema",
-    "database": "mocked_database",
-    "protocol": "mocked_protocol",
-    "port": "mocked_port"
-}
-
 DATABRICKS_CONFIG = {
     "server_hostname": "mocked_server_hostname",
     "http_path": "mocked_http_path",

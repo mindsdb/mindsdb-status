@@ -48,18 +48,31 @@
       "password": "mocked_value"
     },
     "aws_postgresql": {
+      "db_engine": "postgresql",
       "host": "mocked_value",
-       "port": "mocked_value", 
-       "user":"mocked_value",
-       "password": "mocked_value",
-       "database":"mocked_value"
+      "port": "mocked_value", 
+      "user":"mocked_value",
+      "password": "mocked_value",
+      "database":"mocked_value"
     }, 
     "aws_mysql": {
+      "db_engine": "mysql",
       "host": "mocked_value",
       "port": "mocked_value", 
       "user":"mocked_value", 
       "password": "mocked_value", 
       "database":"mocked_value"
+    },
+    "snowflake": {
+      "host": "mocked_host",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "account": "mocked_account",
+      "warehouse": "mocked_warehouse",
+      "schema": "mocked_schema",
+      "database": "mocked_database",
+      "protocol": "mocked_protocol",
+      "port": "mocked_port"
     }
   }
   
