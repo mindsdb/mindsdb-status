@@ -35,24 +35,6 @@ GOOGLE_SHEETS_CONFIG = {
     "sheet_name": "mocked_sheet_name"
 }
 
-AURORA_MYSQL_CONFIG = {
-    "db_engine": "mysql",
-    "host": "mocked_host",
-    "port": "mocked_port",
-    "user": "mocked_user",
-    "password": "mocked_password",
-    "database": "mocked_database"
-}
-
-AURORA_POSTGRESQL_CONFIG = {
-    "db_engine": "postgresql",
-    "host": "mocked_host",
-    "port": "mocked_port",
-    "user": "mocked_user",
-    "password": "mocked_password",
-    "database": "mocked_database"
-}
-
 GITHUB_CONFIG = {
     "repository": "mocked_repository",
     "api_key": "mocked_api_key"
