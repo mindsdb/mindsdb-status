@@ -6,6 +6,17 @@ services:
     container_name: apacheignite
     ports:
       - "10800:10800"
+  surrealdb:
+    entrypoint:
+      - /surreal
+      - start
+      - --user
+      - root
+      - --pass
+      - root
+    image: surrealdb/surrealdb:latest
+    ports:
+      - 8000:8000
 
   # Add more services below as required
   # Example service:
