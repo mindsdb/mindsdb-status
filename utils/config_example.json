@@ -1,35 +1,92 @@
 {
-        "postgresql": {
-            "user": "<your_postgres_username>",
-            "password": "<your_postgres_password>",
-            "host": "<your_postgres_host>",
-            "port": "<your_postgres_port>",
-            "database": "<your_postgres_database>",
-            "schema": "<your_postgres_schema>"
-        },
-        "mysql": {
-            "user": "<your_mysql_username>",
-            "password": "<your_mysql_password>",
-            "host": "<your_mysql_host>",
-            "port": "<your_mysql_port>",
-            "database": "<your_mysql_database>"
-        },
-        "apache_ignite": {
+    "postgresql": {
+      "user": "mocked_value",
+      "password": "mocked_value",
+      "host": "mocked_value",
+      "port": "mocked_value",
+      "database": "mocked_value",
+      "schema": "mocked_value"
+    },
+    "mysql": {
+      "user": "mocked_value", 
+      "password": "mocked_value", 
+      "host": "mocked_value",
+      "port": "mocked_value",
+      "database": "mocked_value"
+    },    
+    "instatus": {
+      "api_key": "mocked_value",
+      "base_url": "mocked_value"
+    },
+    "mindsdb_cloud": {
+      "user": "zoran@mindsdb.com",
+      "password": "123456",
+      "host": "cloud.mindsdb.com",
+      "database": "mindsdb"
+    },
+    "clickhouse": {
+      "host": "mocked_value",
+      "user": "mocked_value",
+      "password": "mocked_value",
+      "port": "mocked_value",
+      "database": "mocked_value"
+    },
+    "huggingface": {
+      "api_key": "mocked_value"
+    },
+    "mariadb": {
+      "host": "mocked_value",
+      "port": "mocked_value",
+      "user": "mocked_value",
+      "password": "mocked_value",
+      "database": "mocked_value"
+    },
+    "mongodb": {
+      "host": "mocked_value",
+      "port": "mocked_value",
+      "user": "mocked_value",
+      "password": "mocked_value"
+    },
+    "aws_postgresql": {
+      "db_engine": "postgresql",
+      "host": "mocked_value",
+      "port": "mocked_value", 
+      "user":"mocked_value",
+      "password": "mocked_value",
+      "database":"mocked_value"
+    }, 
+    "aws_mysql": {
+      "db_engine": "mysql",
+      "host": "mocked_value",
+      "port": "mocked_value", 
+      "user":"mocked_value", 
+      "password": "mocked_value", 
+      "database":"mocked_value"
+    },
+    "snowflake": {
+      "host": "mocked_host",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "account": "mocked_account",
+      "warehouse": "mocked_warehouse",
+      "schema": "mocked_schema",
+      "database": "mocked_database",
+      "protocol": "mocked_protocol",
+      "port": "mocked_port"
+    },
+    "singlestore": {
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "database": "mocked_database"
+    },
+     "apache_ignite": {
             "username": "<your_apache_ignite_username>",
             "password": "<your_apache_ignite_password>",
             "host": "<your_apache_ignite_host>",
             "port": "<your_apache_ignite_port>",
             "schema": "<your_apache_ignite_schema>"
-        },
-        "instatus": {
-            "api_key": "<your_instatus_api_key>",
-            "base_url": "<your_instatus_base_url>"
-        },
-        "mindsdb_cloud": {
-            "user": "<your_mindsdb_cloud_username>",
-            "password": "<your_mindsdb_cloud_password>",
-            "host": "cloud.mindsdb.com",
-            "database": "mindsdb"
         }
-    }
-    
+  }
+  

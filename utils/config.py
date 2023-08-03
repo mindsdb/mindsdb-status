@@ -2,27 +2,6 @@ import os
 import random
 import json
 
-SINGLESTORE_CONFIG = {
-    "user": "mocked_user",
-    "password": "mocked_password",
-    "host": "mocked_host",
-    "port": "mocked_port",
-    "database": "mocked_database"
-}
-
-
-SNOWFLAKE_CONFIG = {
-    "host": "mocked_host",
-    "user": "mocked_user",
-    "password": "mocked_password",
-    "account": "mocked_account",
-    "warehouse": "mocked_warehouse",
-    "schema": "mocked_schema",
-    "database": "mocked_database",
-    "protocol": "mocked_protocol",
-    "port": "mocked_port"
-}
-
 DATABRICKS_CONFIG = {
     "server_hostname": "mocked_server_hostname",
     "http_path": "mocked_http_path",
@@ -33,24 +12,6 @@ DATABRICKS_CONFIG = {
 GOOGLE_SHEETS_CONFIG = {
     "spreadsheet_id": "mocked_spreadsheet_id",
     "sheet_name": "mocked_sheet_name"
-}
-
-AURORA_MYSQL_CONFIG = {
-    "db_engine": "mysql",
-    "host": "mocked_host",
-    "port": "mocked_port",
-    "user": "mocked_user",
-    "password": "mocked_password",
-    "database": "mocked_database"
-}
-
-AURORA_POSTGRESQL_CONFIG = {
-    "db_engine": "postgresql",
-    "host": "mocked_host",
-    "port": "mocked_port",
-    "user": "mocked_user",
-    "password": "mocked_password",
-    "database": "mocked_database"
 }
 
 GITHUB_CONFIG = {
