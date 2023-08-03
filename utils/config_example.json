@@ -80,6 +80,13 @@
       "host": "mocked_host",
       "port": "mocked_port",
       "database": "mocked_database"
-    }
+    },
+     "apache_ignite": {
+            "username": "<your_apache_ignite_username>",
+            "password": "<your_apache_ignite_password>",
+            "host": "<your_apache_ignite_host>",
+            "port": "<your_apache_ignite_port>",
+            "schema": "<your_apache_ignite_schema>"
+        }
   }
   
