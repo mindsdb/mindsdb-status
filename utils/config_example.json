@@ -19,9 +19,9 @@
       "base_url": "mocked_value"
     },
     "mindsdb_cloud": {
-      "user": "zoran@mindsdb.com",
-      "password": "123456",
-      "host": "cloud.mindsdb.com",
+      "user": "mocked_value",
+      "password": "mocked_value",
+      "host": "mocked_value",
       "database": "mindsdb"
     },
     "clickhouse": {
@@ -90,6 +90,9 @@
     },
     "youtube": {
         "youtube_api_token": "mocked_youtube_api_token"
+    },
+    "github": {
+      "repository": "mindsdb/mindsdb"
     }
 }
   

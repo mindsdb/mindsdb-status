@@ -66,7 +66,7 @@ class TestYouTubeConnection(unittest.TestCase):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("youtube", "clgaunphy1301750nd1fvobnz9")
+            cloud_temp = self.template.get_integration_template("YouTube", "clkwhx4626787btna7vrreal6")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
