@@ -19,9 +19,9 @@
       "base_url": "mocked_value"
     },
     "mindsdb_cloud": {
-      "user": "zoran@mindsdb.com",
-      "password": "123456",
-      "host": "cloud.mindsdb.com",
+      "user": "mocked_value",
+      "password": "mocked_value",
+      "host": "mocked_value",
       "database": "mindsdb"
     },
     "clickhouse": {
@@ -81,12 +81,32 @@
       "port": "mocked_port",
       "database": "mocked_database"
     },
-     "apache_ignite": {
-            "username": "<your_apache_ignite_username>",
-            "password": "<your_apache_ignite_password>",
-            "host": "<your_apache_ignite_host>",
-            "port": "<your_apache_ignite_port>",
-            "schema": "<your_apache_ignite_schema>"
-        }
-  }
+    "apache_ignite": {
+        "username": "<your_apache_ignite_username>",
+        "password": "<your_apache_ignite_password>",
+        "host": "<your_apache_ignite_host>",
+        "port": "<your_apache_ignite_port>",
+        "schema": "<your_apache_ignite_schema>"
+    },
+    "youtube": {
+        "youtube_api_token": "mocked_youtube_api_token"
+    },
+    "github": {
+      "repository": "mindsdb/mindsdb"
+    },
+    "mssql": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "database": "mocked_database",
+      "user": "mocked_user",
+      "password": "mocked_password"
+    },
+    "twitter": {
+        "bearer_token": "mocked_value",
+        "consumer_key": "mocked_value",
+        "consumer_secret": "mocked_value",
+        "access_token": "mocked_value",
+        "access_token_secret": "mocked_value"
+    }
+}
   

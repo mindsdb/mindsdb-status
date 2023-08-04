@@ -14,10 +14,6 @@ GOOGLE_SHEETS_CONFIG = {
     "sheet_name": "mocked_sheet_name"
 }
 
-GITHUB_CONFIG = {
-    "repository": "mocked_repository",
-    "api_key": "mocked_api_key"
-}
 
 
 def generate_random_db_name(base_name: str, min_value: int = 1000, max_value: int = 9999) -> str:

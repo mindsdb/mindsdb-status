@@ -27,7 +27,7 @@ class MongoAPITest(unittest.TestCase):
                 port=27017
             )
             self.db = self.client['mindsdb']
-        except ConnectionFailure:
+        except ConnectionFailure as err:
             cloud_temp = self.template.get_cloud_mongo_api_template()
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
             
@@ -45,7 +45,7 @@ class MongoAPITest(unittest.TestCase):
         try:
             collections = self.db.list_collection_names()
             self.assertIsNotNone(collections)
-        except Exception as err:
+        except AssertionError as err:
             cloud_temp = self.template.get_cloud_mongo_api_template()
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
   
@@ -55,10 +55,9 @@ class MongoAPITest(unittest.TestCase):
         Test if the 'models' collection exists in the MongoDB database. If there's an exception, report the incident.
         """
         try:
-            collection = self.db['models']
-            count = collection.count_documents({})
-            self.assertIsNotNone(count)
-        except Exception as err:
+            collections = self.db.list_collection_names()
+            assert 'models' in collections, f"The collection models does not exist."
+        except AssertionError as err:
             cloud_temp = self.template.get_cloud_mongo_api_template()
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
