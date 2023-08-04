@@ -107,6 +107,14 @@
         "consumer_secret": "mocked_value",
         "access_token": "mocked_value",
         "access_token_secret": "mocked_value"
+    },
+    "surrealdb": {
+      "host": "6.tcp.ngrok.io",
+      "port": "15126",
+      "user": "root",
+      "password": "root",
+      "database": "testdb",
+      "namespace": "testns"
     }
 }
   
