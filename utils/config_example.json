@@ -19,9 +19,9 @@
       "base_url": "mocked_value"
     },
     "mindsdb_cloud": {
-      "user": "mocked_value",
-      "password": "mocked_value",
-      "host": "mocked_value",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "host": "mocked_host",
       "database": "mindsdb"
     },
     "clickhouse": {
@@ -109,12 +109,12 @@
         "access_token_secret": "mocked_value"
     },
     "surrealdb": {
-      "host": "6.tcp.ngrok.io",
-      "port": "15126",
-      "user": "root",
-      "password": "root",
-      "database": "testdb",
-      "namespace": "testns"
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "user": "mocked_user",
+      "password": "mocker_password",
+      "database": "mocked_database",
+      "namespace": "mocked_namespace"
     }
 }
   
