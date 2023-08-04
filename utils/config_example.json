@@ -100,6 +100,13 @@
       "database": "mocked_database",
       "user": "mocked_user",
       "password": "mocked_password"
+    },
+    "twitter": {
+        "bearer_token": "mocked_value",
+        "consumer_key": "mocked_value",
+        "consumer_secret": "mocked_value",
+        "access_token": "mocked_value",
+        "access_token_secret": "mocked_value"
     }
 }
   
