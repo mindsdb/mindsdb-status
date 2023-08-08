@@ -115,6 +115,10 @@
       "password": "mocker_password",
       "database": "mocked_database",
       "namespace": "mocked_namespace"
+    },
+    "shopify":{
+      "shop_url": "https://myshopify.com",
+      "access_token": "mocker_token"
     }
 }
   
