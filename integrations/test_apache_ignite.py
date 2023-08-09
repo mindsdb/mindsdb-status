@@ -65,7 +65,7 @@ class TestApacheIgniteConnection(unittest.TestCase):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Apache Ignite", "clg3ro9pj59766bdoia5mkdgdb")
+            cloud_temp = self.template.get_integration_template("Apache Ignite", "cll41e2to1892b7o8xquc22d2")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 

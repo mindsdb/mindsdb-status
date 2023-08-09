@@ -65,7 +65,7 @@ class TestSurrealDBConnection(unittest.TestCase):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("SurrealDB", "clg3ro9pj59766bdoia5mkdgdb")
+            cloud_temp = self.template.get_integration_template("SurrealDB", "cll2bthzp11419bjol5mjiu1ln")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
