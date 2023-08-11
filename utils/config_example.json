@@ -118,7 +118,10 @@
     },
     "shopify":{
       "shop_url": "https://myshopify.com",
-      "access_token": "mocker_token"
+      "access_token": "mocked_token"
+    },
+    "binance": {
+      
     }
 }
   
