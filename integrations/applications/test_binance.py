@@ -66,7 +66,7 @@ class TestBinanceConnection(unittest.TestCase):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Binance", "clkwhx4626787btna7vrreal6")
+            cloud_temp = self.template.get_integration_template("Binance", "cll6ifgwl21601bfoj96vvlu0f")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
