@@ -21,7 +21,7 @@ class MongoAPITest(unittest.TestCase):
             self.template = template()
             config = get_value_from_json_env_var('INTEGRATIONS_CONFIG', 'mindsdb_cloud')
             self.client = MongoClient(
-                host='cloud.mindsdb.com',
+                host=config['host'],
                 username=config['user'],
                 password=config['password'],
                 port=27017

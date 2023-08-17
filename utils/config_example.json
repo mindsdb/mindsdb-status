@@ -119,6 +119,10 @@
     "shopify":{
       "shop_url": "https://myshopify.com",
       "access_token": "mocker_token"
+    },
+    "google_sheet":{
+      "spreadsheet_id": "mocked_id",
+      "sheet_name": "mocked_name"
     }
 }
   

@@ -23,7 +23,7 @@ class MySQLAPITest(unittest.TestCase):
             self.cnx = mysql.connector.connect(
                 user=config['user'],
                 password=config['password'],
-                host='cloud.mindsdb.com',
+                host=config['host'],
                 database='mindsdb'
             )
         except mysql.connector.Error as err:

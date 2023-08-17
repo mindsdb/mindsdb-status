@@ -71,3 +71,4 @@ jobs:
         python -m unittest integrations/applications/test_youtube.py
         python -m unittest integrations/applications/test_github.py
         python -m unittest integrations/applications/test_shopify.py
+        python -m unittest integrations/applications/test_google_sheets.py
