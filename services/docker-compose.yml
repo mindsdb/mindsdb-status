@@ -17,6 +17,13 @@ services:
     image: surrealdb/surrealdb:latest
     ports:
       - 8000:8000
+  supabasedb:
+    image: supabase/postgres
+    ports:
+    - 5433:5433
+    command: postgres -c config_file=/etc/postgressql/postgressql.conf
+    enviroment:
+      POSTGRES_PASSWROD: postgres
 
   # Add more services below as required
   # Example service:
