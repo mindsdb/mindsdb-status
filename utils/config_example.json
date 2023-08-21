@@ -118,18 +118,17 @@
     },
     "shopify":{
       "shop_url": "https://myshopify.com",
-<<<<<<< HEAD
       "access_token": "mocker_token"
     },
     "google_sheet":{
       "spreadsheet_id": "mocked_id",
       "sheet_name": "mocked_name"
-=======
-      "access_token": "mocked_token"
     },
     "binance": {
       
->>>>>>> 5868a2e5ac09082d6cc8b21534fe4630deb0bd11
+    },
+    "slack":{
+      "token": "mocked_token"
     }
 }
   

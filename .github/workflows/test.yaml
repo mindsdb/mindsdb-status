@@ -72,3 +72,4 @@ jobs:
         python -m unittest integrations/applications/test_shopify.py
         python -m unittest integrations/applications/test_google_sheets.py
         python -m unittest integrations/applications/test_binance.py
+        python -m unittest integrations/applications/test_slack.py
