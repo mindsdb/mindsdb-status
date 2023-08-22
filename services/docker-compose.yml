@@ -22,7 +22,7 @@ services:
     ports:
     - 5433:5433
     command: postgres -c config_file=/etc/postgressql/postgressql.conf
-    enviroment:
+    environment:
       POSTGRES_PASSWROD: postgres
 
   # Add more services below as required
