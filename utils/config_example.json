@@ -123,12 +123,21 @@
     "binance": {
 
     },
+    "google_sheet":{
+      "spreadsheet_id": "mocked_id",
+      "sheet_name": "mocked_name"
+    },
+    "binance": {
+      
+    },
+    "slack":{
+      "token": "mocked_token"
+    },
     "supabase": {
       "host": "mocked_host",
       "port": "mocked_port",
       "database": "mocked_database",
       "user": "mocked_user",
       "password": "mocked_password"
-    }
 }
   

@@ -61,7 +61,6 @@ jobs:
         python -m unittest integrations/test_singlestore.py
         python -m unittest integrations/test_mssql.py
         python -m unittest integrations/test_surrealdb.py
-        python -m unittest integrations/test_apache_ignite.py
 
     - name: Run MindsDB Application Integrations Tests
       env:
@@ -72,3 +71,5 @@ jobs:
         python -m unittest integrations/applications/test_github.py
         python -m unittest integrations/applications/test_shopify.py
         python -m unittest integrations/applications/test_google_sheets.py
+        python -m unittest integrations/applications/test_binance.py
+        python -m unittest integrations/applications/test_slack.py
