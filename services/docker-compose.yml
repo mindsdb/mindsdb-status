@@ -20,7 +20,7 @@ services:
   supabasedb:
     image: supabase/postgres
     ports:
-    - 5433:5433
+    - 5433:5432
     command: postgres -c config_file=/etc/postgressql/postgressql.conf
     environment:
       POSTGRES_PASSWROD: postgres
