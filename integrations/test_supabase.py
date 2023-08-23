@@ -53,16 +53,16 @@ class MyTestCase(unittest.TestCase):
         try:
             cursor = self.connection.cursor()
             random_db_name = generate_random_db_name("supabase_datasource")
-            google_calendar_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'supabase')
+            supabase_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'supabase')
             query = self.query_generator.create_database_query(
                 random_db_name,
                 "supabase",
-                google_calendar_config
+                supabase_config
             )
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Supabase", "clg3rmxx157961bdoi3zyenisn")
+            cloud_temp = self.template.get_integration_template("Supabase", "cllnmxa2s13782bdn3417radci")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
