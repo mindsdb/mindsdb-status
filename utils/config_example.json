@@ -118,7 +118,10 @@
     },
     "shopify":{
       "shop_url": "https://myshopify.com",
-      "access_token": "mocker_token"
+      "access_token": "mocked_token"
+    },
+    "binance": {
+
     },
     "google_sheet":{
       "spreadsheet_id": "mocked_id",
@@ -129,6 +132,12 @@
     },
     "slack":{
       "token": "mocked_token"
-    }
+    },
+    "supabase": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "database": "mocked_database",
+      "user": "mocked_user",
+      "password": "mocked_password"
 }
   
