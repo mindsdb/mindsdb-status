@@ -139,5 +139,6 @@
       "database": "mocked_database",
       "user": "mocked_user",
       "password": "mocked_password"
+    }
 }
   
