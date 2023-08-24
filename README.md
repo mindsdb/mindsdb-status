@@ -1,6 +1,6 @@
 # Mindsdb Status
 
-mindsdb-statuses hosts integration tests to ensure the daily availability and proper functioning of MindsDB Cloud and its various integrations, such as MySQL, PostgreSQL, Snowflake, ClickHouse, and MongoDB. The test results are published on the MindsDB status page: https://mindsdb.instatus.com/
+mindsdb-status hosts integration tests to ensure the daily availability and proper functioning of MindsDB Cloud and its various integrations, such as MySQL, PostgreSQL, Snowflake, ClickHouse, and MongoDB. The test results are published on the MindsDB status page: https://mindsdb.instatus.com/
 
 
 ## Table of Contents
@@ -18,20 +18,20 @@ These instructions will guide you through setting up the project and running the
 ### Prerequisites
 
 * Python 3.7.x or higher
-* An active MindsDB Cloud account and InstaStatus API key
+* An active [MindsDB Cloud account](https://cloud.mindsdb.com/) and [InstaStatus API key](https://instatus.com/help/api)
 
 ## Installation
 
-    Clone the repository:
+Clone the repository:
 
 ```
-git clone https://github.com/ZoranPandovski/mindsdb-statuses.git
+git clone https://github.com/mindsdb/mindsdb-status.git
 ```
 
 Navigate to the project directory:
 
 ```
-cd mindsdb-statuses
+cd mindsdb-status
 ```
 Create a virtual environment (recommended):
 
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ## Running the Tests
 
-Set the necessary environment variables (replace your_api_key with your MindsDB Cloud API key):
+Set the necessary environment variables:
 
 * On Windows:
 
@@ -68,7 +68,7 @@ Set the necessary environment variables (replace your_api_key with your MindsDB 
 set MINDSDB_CLOUD_USER=
 set MINDSDB_CLOUD_PASS=
 set INSTA_API_KEY=
-set INSTA_API_BASE_URL
+set INSTA_API_BASE_URL=
 ```
 
 * On macOS and Linux:
@@ -77,7 +77,7 @@ set INSTA_API_BASE_URL
 export MINDSDB_CLOUD_USER=
 export MINDSDB_CLOUD_PASS=
 export INSTA_API_KEY=
-export INSTA_API_BASE_URL
+export INSTA_API_BASE_URL=
 ```
 
 Run the tests:
@@ -94,4 +94,4 @@ python -m unittest discover connectors/
 
 ## License
 
-mindsdb-statuses is licensed under the MIT License.
+mindsdb-status is licensed under the MIT License.
