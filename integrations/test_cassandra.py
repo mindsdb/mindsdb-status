@@ -7,9 +7,10 @@ from utils.log import setup_logger
 from utils.instatus import InstatusClient as ins
 from utils.template import IncidentTemplate as template
 
-class TestMonkeyLearnConnection(unittest.TestCase):
+
+class TestCassandraConnection(unittest.TestCase):
     """
-    Test class for testing the Monkey Learn ML Engine using the MindsDB SQL API.
+    Test class for testing the Apache Cassandra datasource using the MindsDB SQL API.
     """
 
     def setUp(self):
@@ -34,36 +35,39 @@ class TestMonkeyLearnConnection(unittest.TestCase):
 
     def tearDown(self):
         """
-        Clean up the test environment by closing the connection to the MindsDB SQL API.
+        Clean up the test environment by closing the connection
+        to the MindsDB SQL API.
         """
         if self.connection.is_connected():
             self.connection.close()
 
     def test_connection_established(self):
         """
-        Test that the connection to the MindsDB SQL API is established.
+        Test that the connection to the MindsDB SQL API is established
         """
         if not self.connection.is_connected():
             cloud_temp = self.template.get_cloud_sql_api_template()
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
-    def test_create_ml_engine(self):
+    def test_execute_query(self):
         """
-        Create new Monkey Learn ML Engine.
+        Create a new Cassandra Datasource.
         """
         try:
             cursor = self.connection.cursor()
-            random_db_name = generate_random_db_name("monkeylearn")
-            query = self.query_generator.create_ml_engine_query(
+            cassandra_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'cassandra')
+            random_db_name = generate_random_db_name("cassandra_datasource")
+            query = self.query_generator.create_database_query(
                         random_db_name,
-                        "monkeylearn",
-                        {}
-                    )
+                        "cassandra",
+                         cassandra_config
+            )
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("MonkeyLearn", "cllqbygse20980bdocblmt257p")
+            cloud_temp = self.template.get_integration_template("Apache Cassandra", "cllqcoaqd36506bkocxx5fjnny")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
+
 
 if __name__ == "__main__":
     unittest.main()
