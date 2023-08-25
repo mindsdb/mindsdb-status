@@ -62,7 +62,7 @@ class TestMonkeyLearnConnection(unittest.TestCase):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Monkey Learn", "clkmp25o097007ayokrpewimmf")
+            cloud_temp = self.template.get_integration_template("Monkey Learn", "cllqbygse20980bdocblmt257p")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 if __name__ == "__main__":
