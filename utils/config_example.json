@@ -127,9 +127,6 @@
       "spreadsheet_id": "mocked_id",
       "sheet_name": "mocked_name"
     },
-    "binance": {
-      
-    },
     "slack":{
       "token": "mocked_token"
     },
@@ -139,5 +136,9 @@
       "database": "mocked_database",
       "user": "mocked_user",
       "password": "mocked_password"
+    },
+    "monkeylearn": {
+      "api_key": "mocked_api_key"
+    }
 }
   
