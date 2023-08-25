@@ -146,6 +146,13 @@
       "user": "mocked_user",
       "password": "mocked_password",
       "keyspace": "mocked_database"
+    },
+    "scylladb": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "keyspace": "mocked_database"
     }
 }
   
