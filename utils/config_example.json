@@ -153,6 +153,12 @@
       "user": "mocked_user",
       "password": "mocked_password",
       "keyspace": "mocked_database"
+    },
+    "couchbase": {
+      "host": "localhost",
+      "bucket": "test-bucker",
+      "user": "admin",
+      "password": "password"
     }
 }
   
