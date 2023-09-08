@@ -7,9 +7,10 @@ from utils.log import setup_logger
 from utils.instatus import InstatusClient as ins
 from utils.template import IncidentTemplate as template
 
-class TestOpenAIConnection(unittest.TestCase):
+
+class TestScyllaConnection(unittest.TestCase):
     """
-    Test class for testing the OpenAI ML Engine using the MindsDB SQL API.
+    Test class for testing the ScyllaDB datasource using the MindsDB SQL API.
     """
 
     def setUp(self):
@@ -34,61 +35,38 @@ class TestOpenAIConnection(unittest.TestCase):
 
     def tearDown(self):
         """
-        Clean up the test environment by closing the connection to the MindsDB SQL API.
+        Clean up the test environment by closing the connection
+        to the MindsDB SQL API.
         """
         if self.connection.is_connected():
             self.connection.close()
 
     def test_connection_established(self):
         """
-        Test that the connection to the MindsDB SQL API is established.
+        Test that the connection to the MindsDB SQL API is established
         """
         if not self.connection.is_connected():
             cloud_temp = self.template.get_cloud_sql_api_template()
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
-    def test_create_ml_engine(self):
+    def test_execute_query(self):
         """
-        Create new OpenAI ML Engine.
+        Create a new ScyllaDB Datasource.
         """
         try:
             cursor = self.connection.cursor()
-            random_db_name = generate_random_db_name("openai")
-            query = self.query_generator.create_ml_engine_query(
+            scylladb_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'scylladb')
+            random_db_name = generate_random_db_name("scylla_datasource")
+            query = self.query_generator.create_database_query(
                         random_db_name,
-                        "openai",
-                        {}
-                    )
+                        "scylladb",
+                         scylladb_config
+            )
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("OpenAI", "clkmp25o097007ayokrpewimmf")
+            cloud_temp = self.template.get_integration_template("ScyllaDB", "cllqcz0t144849bdocts3uhfhq")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
-
-    
-    '''
-    TODO: Solve OpenAI timeouts
-    def test_create_model(self):
-        """
-        Create new model using OpenAI.
-        """
-        try:
-            cursor = self.connection.cursor()
-            random_model_name = generate_random_db_name("oepanai")
-            query = self.query_generator.create_model(
-                        random_model_name,
-                        "answer",
-                        {
-                            "engine": "openai",
-                            "prompt_template" : "ask a question to a model"
-                        }
-                    )
-            cursor.execute(query, multi=False)
-            cursor.close()
-        except Exception as err:
-            self.logger.exception(err)
-            assert False, f"Error executing query: {err}"
-    '''
 
 
 if __name__ == "__main__":

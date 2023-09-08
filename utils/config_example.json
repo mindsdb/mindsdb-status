@@ -121,10 +121,38 @@
       "access_token": "mocked_token"
     },
     "binance": {
-      
+
     },
-    "google_calendar": {
-      "credentials_file": "mocked_credentials_file"
+    "google_sheet":{
+      "spreadsheet_id": "mocked_id",
+      "sheet_name": "mocked_name"
+    },
+    "slack":{
+      "token": "mocked_token"
+    },
+    "supabase": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "database": "mocked_database",
+      "user": "mocked_user",
+      "password": "mocked_password"
+    },
+    "monkeylearn": {
+      "api_key": "mocked_api_key"
+    },
+    "cassandra": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "keyspace": "mocked_database"
+    },
+    "scylladb": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "keyspace": "mocked_database"
     }
 }
   
