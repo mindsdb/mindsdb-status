@@ -64,7 +64,7 @@ class TestCouchBaseConnection(unittest.TestCase):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Couchbase", "please generate a code for me")
+            cloud_temp = self.template.get_integration_template("Couchbase", "clmevai6r129186ben8wo1d72qd")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
