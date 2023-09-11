@@ -159,6 +159,10 @@
       "bucket": "test-bucker",
       "user": "admin",
       "password": "password"
+    },
+    "email":{
+      "email": "@gmail.com",
+      "password": "mocked_pass"
     }
 }
   

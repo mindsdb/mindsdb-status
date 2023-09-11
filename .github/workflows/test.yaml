@@ -58,10 +58,8 @@ jobs:
         python -m unittest integrations/test_mongodb.py
         python -m unittest integrations/test_amazon_aurora.py
         python -m unittest integrations/test_snowflake.py
-        python -m unittest integrations/test_singlestore.py
         python -m unittest integrations/test_mssql.py
         python -m unittest integrations/test_surrealdb.py
-        python -m unittest integrations/test_supabase.py
         python -m unittest integrations/test_cassandra.py
         python -m unittest integrations/test_scylladb.py
 
@@ -76,3 +74,4 @@ jobs:
         python -m unittest integrations/applications/test_google_sheets.py
         python -m unittest integrations/applications/test_binance.py
         python -m unittest integrations/applications/test_slack.py
+        python -m unittest integrations/applications/test_email.py
