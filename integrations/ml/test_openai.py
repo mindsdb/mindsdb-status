@@ -1,8 +1,7 @@
 import unittest
-from utils.query_generator import QueryGenerator as query
 from utils.config import generate_random_db_name
 from integrations.base_test import BaseTest
-from utils.config import generate_random_db_name
+
 
 class TestOpenAIConnection(BaseTest):
     """
@@ -23,11 +22,10 @@ class TestOpenAIConnection(BaseTest):
                     )
             cursor.execute(query)
             cursor.close()
-        except Exception as err:
+        except Exception:
             cloud_temp = self.template.get_integration_template("OpenAI", "clkmp25o097007ayokrpewimmf")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
-    
     '''
     TODO: Solve OpenAI timeouts
     def test_create_model(self):
