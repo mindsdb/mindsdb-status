@@ -62,6 +62,7 @@ jobs:
         python -m unittest integrations/test_surrealdb.py
         python -m unittest integrations/test_cassandra.py
         python -m unittest integrations/test_scylladb.py
+        python -m unittest integrations/test_couchbase.py
 
     - name: Run MindsDB Application Integrations Tests
       env:
