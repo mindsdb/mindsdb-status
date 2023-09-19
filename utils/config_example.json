@@ -19,9 +19,9 @@
       "base_url": "mocked_value"
     },
     "mindsdb_cloud": {
-      "user": "mocked_user",
-      "password": "mocked_password",
-      "host": "mocked_host",
+      "user": "minurapunchihewa17@gmail.com",
+      "password": "Geronimo@1721",
+      "host": "cloud.mindsdb.com",
       "database": "mindsdb"
     },
     "clickhouse": {
@@ -124,8 +124,8 @@
 
     },
     "google_sheet":{
-      "spreadsheet_id": "mocked_id",
-      "sheet_name": "mocked_name"
+      "spreadsheet_id": "1sk9Pa5Bd3a75zQZJngggRvqwhbPpfsrR3gbINdpCAx8",
+      "sheet_name": "twitter_data"
     },
     "slack":{
       "token": "mocked_token"
