@@ -56,3 +56,19 @@ class QueryGenerator:
                         {parameter_str}
                     ;"""
         return query
+
+    @staticmethod
+    def simple_select_query(table_name: str, columns: list = None, limit: int = None) -> str:
+        """
+        Generate a simple SELECT query with the given parameters.
+
+        :param table_name: The name of the table to query.
+        :param columns: A list of columns to SELECT.
+        :param limit: The number of rows to LIMIT the query to.
+        :return: The generated SQL query as a string.
+        """
+        columns = columns or ["*"]
+        column_str = ", ".join(columns)
+        limit_str = f" LIMIT {limit}" if limit else ""
+        query = f"""SELECT {column_str} FROM {table_name}{limit_str};"""
+        return query
