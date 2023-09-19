@@ -163,6 +163,9 @@
     "email":{
       "email": "@gmail.com",
       "password": "mocked_pass"
+    },
+    "files": {
+      "table_name": "mocked_table_name"
     }
 }
   
