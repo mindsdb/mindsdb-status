@@ -22,7 +22,7 @@ class TestFilesConnection(BaseTest):
             cursor.fetchall()
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Files", "cllf7xuyp10564chol6kaf1qp1")
+            cloud_temp = self.template.get_integration_template("Files", "clmq7ifa058152bcopwvi1w23o")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
