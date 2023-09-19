@@ -182,7 +182,6 @@
         "auth_provider_x509_cert_url": "mocked_auth_provider_x509_cert_url",
         "client_x509_cert_url": "mocked_client_x509_cert_url"
       }
-
     }
 }
   
