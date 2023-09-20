@@ -17,7 +17,7 @@ class TestLlamaIndexConnection(BaseTest):
             random_db_name = generate_random_db_name("llamaIndex_engine")
             query = self.query_generator.create_ml_engine_query(
                         random_db_name,
-                        "llamaIndex",
+                        "llama_index",
                         {}
                     )
             cursor.execute(query)
