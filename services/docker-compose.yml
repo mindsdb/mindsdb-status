@@ -38,6 +38,14 @@ services:
     # For example, to set environment variables:
     environment:
       - COUCHBASE_ROOT_PASSWORD=admin
+  cockroachdb:
+    image: cockroachdb/cockroach:v19.2.2
+    container_name: cockroachdb
+    ports:
+      - "26257:26257"
+    command: start-single-node --insecure
+    volumes:
+      - "${PWD}/cockroach-data/cockroachdb:/cockroach/cockroach-data"
   # Add more services below as required
   # Example service:
   # service_name:
