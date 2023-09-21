@@ -189,6 +189,13 @@
       "user": "mocked_user",
       "password": "mocked_password",
       "database": "mocked_database"
+    },
+    "planetscale": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "database": "mocked_database",
+      "user": "mocked_user",
+      "password": "mocked_password"
     }
 }
   
