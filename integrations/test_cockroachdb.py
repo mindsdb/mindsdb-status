@@ -24,7 +24,7 @@ class TestCockroachDBConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("CockroachDB", "clmqcnjoh110175brod4y64g93f")
+            cloud_temp = self.template.get_integration_template("CockroachDB", "clmt4z3dg19301bfn3sb17x5ue")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
