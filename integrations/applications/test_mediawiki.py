@@ -23,7 +23,7 @@ class TestMediaWikiConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Media Wiki", "clmq7mgz856085bjopr2mn8g8e")
+            cloud_temp = self.template.get_integration_template("Media Wiki", "clmt4gm0n12728b8n3e6nkz55p")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
