@@ -196,6 +196,9 @@
       "database": "mocked_database",
       "user": "mocked_user",
       "password": "mocked_password"
+    },
+    "stripe": {
+      "api_key": "mocked_api_key"
     }
 }
   
