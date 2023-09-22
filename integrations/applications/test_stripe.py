@@ -24,7 +24,7 @@ class TestStripeConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Stripe", "clmq7mgz856085bjopr2mn8g8e")
+            cloud_temp = self.template.get_integration_template("Stripe", "clmuixlbt491406axoc392n13ps")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
