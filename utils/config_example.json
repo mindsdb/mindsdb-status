@@ -207,10 +207,10 @@
       "bucket": "mocked_bucket",
       "key": "mocked_key",
       "input_serialization": {
-        "csv": {
+        "CSV": {
           "FileHeaderInfo": "mocked_file_header_info"
         }
-      },
+      }
     }
 }
   
