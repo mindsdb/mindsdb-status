@@ -199,6 +199,13 @@
     },
     "stripe": {
       "api_key": "mocked_api_key"
+    },
+    "tidb": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "database": "mocked_database",
+      "user": "mocked_user",
+      "password": "mocked_password"
     }
 }
   
