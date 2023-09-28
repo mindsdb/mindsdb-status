@@ -199,6 +199,18 @@
     },
     "stripe": {
       "api_key": "mocked_api_key"
+    },
+    "s3": {
+      "aws_access_key_id": "mocked_aws_access_key_id",
+      "aws_secret_access_key": "mocked_aws_secret_access_key",
+      "region_name": "mocked_region_name",
+      "bucket": "mocked_bucket",
+      "key": "mocked_key",
+      "input_serialization": {
+        "CSV": {
+          "FileHeaderInfo": "mocked_file_header_info"
+        }
+      }
     }
 }
   
