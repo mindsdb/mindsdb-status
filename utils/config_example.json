@@ -218,6 +218,13 @@
           "FileHeaderInfo": "mocked_file_header_info"
         }
       }
+    },
+    "databend": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "database": "mocked_database"
     }
 }
   
