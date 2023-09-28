@@ -24,7 +24,7 @@ class TestTiDBConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("TiDB", "clmt4z3dg19301bfn3sb17x5ue")
+            cloud_temp = self.template.get_integration_template("TiDB", "cln36r1as2403bioap8ktrjis")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
