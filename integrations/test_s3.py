@@ -24,7 +24,7 @@ class TestS3Connection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Amazon S3", "cln1kmzmy130779bbmzwsz7yepe")
+            cloud_temp = self.template.get_integration_template("Amazon S3", "cln36iujg19216bfohcumsrlf2")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
