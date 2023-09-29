@@ -218,6 +218,13 @@
           "FileHeaderInfo": "mocked_file_header_info"
         }
       }
+    },
+    "oceanbase": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "database": "mocked_database",
+      "user": "mocked_user",
+      "password": "mocked_password"
     }
 }
   
