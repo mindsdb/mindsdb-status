@@ -46,6 +46,15 @@ services:
     command: start-single-node --insecure
     volumes:
       - "${PWD}/cockroach-data/cockroachdb:/cockroach/cockroach-data"
+  yugabyte:
+    image: yugabytedb/yugabyte:2.19.2.0-b121
+    container_name: yugabyte
+    ports:
+      - "7000:7000"
+      - "9000:9000"
+      - "5433:5433"
+      - "9042:9042"
+    command: bin/yugabyted start --daemon=false
   # Add more services below as required
   # Example service:
   # service_name:
