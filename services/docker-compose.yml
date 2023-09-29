@@ -46,6 +46,11 @@ services:
     command: start-single-node --insecure
     volumes:
       - "${PWD}/cockroach-data/cockroachdb:/cockroach/cockroach-data"
+  oceanbase:
+    image: oceanbase/oceanbase-ce
+    container_name: oceanbase
+    ports:
+      - "2881:2881"
   # Add more services below as required
   # Example service:
   # service_name:
