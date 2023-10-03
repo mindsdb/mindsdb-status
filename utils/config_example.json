@@ -218,6 +218,9 @@
           "FileHeaderInfo": "mocked_file_header_info"
         }
       }
+    },
+    "sendinblue": {
+      "api_key": "mocked_api_key"
     }
 }
   
