@@ -153,6 +153,45 @@
       "user": "mocked_user",
       "password": "mocked_password",
       "keyspace": "mocked_database"
+    },
+    "couchbase": {
+      "host": "localhost",
+      "bucket": "test-bucker",
+      "user": "admin",
+      "password": "password"
+    },
+    "email":{
+      "email": "@gmail.com",
+      "password": "mocked_pass"
+    },
+    "files": {
+      "table_name": "mocked_table_name"
+    },
+    "bigquery": {
+      "project_id": "mocked_project_id",
+      "dataset": "mocked_dataset",
+      "service_account_json": {
+        "type": "mocked_type",
+        "project_id": "mocked_project_id",
+        "private_key_id": "mocked_private_key_id",
+        "private_key": "mocked_private_key",
+        "client_email": "mocked_client_email",
+        "client_id": "mocked_client_id",
+        "auth_uri": "mocked_auth_uri",
+        "token_uri": "mocked_token_uri",
+        "auth_provider_x509_cert_url": "mocked_auth_provider_x509_cert_url",
+        "client_x509_cert_url": "mocked_client_x509_cert_url"
+      }
+    },
+    "cockroachdb": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "database": "mocked_database"
+    },
+    "stripe": {
+      "api_key": "mocked_api_key"
     }
 }
   

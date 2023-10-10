@@ -3,28 +3,28 @@ from integrations.base_test import BaseTest
 from utils.config import generate_random_db_name, get_value_from_json_env_var
 
 
-class TestSlackConnection(BaseTest):
+class TestStripeConnection(BaseTest):
     """
-    Test class for testing the Slack datasource using the MindsDB SQL API.
+    Test class for testing the Stripe datasource using the MindsDB SQL API.
     """
 
     def test_execute_query(self):
         """
-        Create a new Slack Datasource.
+        Create a new Stripe Datasource.
         """
         try:
             cursor = self.connection.cursor()
-            random_db_name = generate_random_db_name("slack_datasource")
-            slack_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'slack')
+            random_db_name = generate_random_db_name("stripe_datasource")
+            stripe_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'stripe')
             query = self.query_generator.create_database_query(
-                        random_db_name,
-                        "slack",
-                        slack_config
-                    )
+                random_db_name,
+                "stripe",
+                stripe_config
+            )
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Slack", "cllkx66gh12008ban8cc5c3320")
+            cloud_temp = self.template.get_integration_template("Stripe", "clmuixlbt491406axoc392n13ps")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 

@@ -24,7 +24,28 @@ services:
     command: postgres -c config_file=/etc/postgressql/postgressql.conf
     environment:
       POSTGRES_PASSWROD: postgres
-
+  couchbase:
+    image: couchbase
+    container_name: db
+    ports:
+      - "8091-8097:8091-8097"
+      - "9123:9123"
+      - "11207:11207"
+      - "11210:11210"
+      - "11280:11280"
+      - "18091-18097:18091-18097"
+    # Add other configuration options as needed
+    # For example, to set environment variables:
+    environment:
+      - COUCHBASE_ROOT_PASSWORD=admin
+  cockroachdb:
+    image: cockroachdb/cockroach:v19.2.2
+    container_name: cockroachdb
+    ports:
+      - "26257:26257"
+    command: start-single-node --insecure
+    volumes:
+      - "${PWD}/cockroach-data/cockroachdb:/cockroach/cockroach-data"
   # Add more services below as required
   # Example service:
   # service_name:
