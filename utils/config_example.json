@@ -218,6 +218,11 @@
           "FileHeaderInfo": "mocked_file_header_info"
         }
       }
+    },
+    "jira": {
+      "jira_url": "mocked_jira_url",
+      "jira_api_token": "mocked_api_token",
+      "project": "mocked_project"
     }
 }
   
