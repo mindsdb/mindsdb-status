@@ -218,6 +218,14 @@
           "FileHeaderInfo": "mocked_file_header_info"
         }
       }
-    }
+    },
+  "google_cloud_sql": {
+    "db_engine": "mysql",
+    "host": "mocked_host",
+    "port": "mocked_port",
+    "user": "mocked_user",
+    "password": "mocked_password",
+    "database": "example_db"
+  }
 }
   
