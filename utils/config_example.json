@@ -218,6 +218,12 @@
           "FileHeaderInfo": "mocked_file_header_info"
         }
       }
+    },
+    "plaid": {
+      "client_id": "mocked_client_id",
+      "secret": "mocked_secret",
+      "access_token": "mocked_access_token",
+      "plaid_env": "mocked_plaid_env"
     }
 }
   
