@@ -20,7 +20,7 @@ services:
   supabasedb:
     image: supabase/postgres
     ports:
-    - 5433:5432
+      - 5433:5432
     command: postgres -c config_file=/etc/postgressql/postgressql.conf
     environment:
       POSTGRES_PASSWROD: postgres
@@ -34,8 +34,6 @@ services:
       - "11210:11210"
       - "11280:11280"
       - "18091-18097:18091-18097"
-    # Add other configuration options as needed
-    # For example, to set environment variables:
     environment:
       - COUCHBASE_ROOT_PASSWORD=admin
   cockroachdb:
@@ -46,18 +44,17 @@ services:
     command: start-single-node --insecure
     volumes:
       - "${PWD}/cockroach-data/cockroachdb:/cockroach/cockroach-data"
-  # Add more services below as required
-  # Example service:
-  # service_name:
-  #   image: image_name:tag
-  #   container_name: container_name
-  #   ports:
-  #     - "host_port:container_port"
-  #   volumes:
-  #     - "volume_name:/path/in/container"
-  #   environment:
-  #     - ENV_VARIABLE=value
-  #   ...
-
-# Add any additional configuration for the whole Docker Compose stack here if needed
-# For example, defining volumes, networks, etc.
+  hadoop:
+    image: sequenceiq/hadoop-docker:2.7.1
+    ports:
+      - "50070:50070"
+  hive4:
+    image: apache/hive:4.0.0-beta-1
+    ports:
+      - "10000:10000"
+      - "10002:10002"
+    environment:
+      SERVICE_NAME: hiveserver2
+    depends_on:
+      - hadoop
+# ... Further configuration for volumes, networks, etc., can be added below this line
