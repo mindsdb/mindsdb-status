@@ -15,11 +15,11 @@ class TestJiraConnection(BaseTest):
         try:
             cursor = self.connection.cursor()
             random_db_name = generate_random_db_name("jira_datasource")
-            binance_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'jira')
+            jira_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'jira')
             query = self.query_generator.create_database_query(
                         random_db_name,
                         "jira",
-                        binance_config
+                        jira_config
                     )
             cursor.execute(query)
             cursor.close()
