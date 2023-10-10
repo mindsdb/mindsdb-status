@@ -218,6 +218,9 @@
           "FileHeaderInfo": "mocked_file_header_info"
         }
       }
+    },
+    "duckdb": {
+      "database": "mocked_database"
     }
 }
   
