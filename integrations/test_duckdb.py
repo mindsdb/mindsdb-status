@@ -14,12 +14,12 @@ class TestDuckDBConnection(BaseTest):
         """
         try:
             cursor = self.connection.cursor()
-            sdb_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'duckdb')
+            duckdb_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'duckdb')
             random_db_name = generate_random_db_name("duckdb_datasource")
             query = self.query_generator.create_database_query(
                         random_db_name,
                         "duckdb",
-                         sdb_config
+                         duckdb_config
                     )
             cursor.execute(query)
             cursor.close()
