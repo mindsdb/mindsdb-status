@@ -24,7 +24,7 @@ class TestNewsAPIConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("News API", "cllkx66gh12008ban8cc5c3320")
+            cloud_temp = self.template.get_integration_template("News API", "clnx9m44t2220biomtbyws863")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
