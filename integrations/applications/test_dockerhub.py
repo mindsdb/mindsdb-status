@@ -24,7 +24,7 @@ class TestDockerHubConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Docker Hub", "clnx9m44t2220biomtbyws863")
+            cloud_temp = self.template.get_integration_template("Docker Hub", "clo48noho15824bln910dtac95")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
