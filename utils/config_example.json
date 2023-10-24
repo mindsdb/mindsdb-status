@@ -221,6 +221,10 @@
     },
     "newsapi": {
       "api_key": "mocked_api_key"
+    },
+    "dockerhub": {
+      "username": "mocked_username",
+      "password": "mocked_password"
     }
 }
   
