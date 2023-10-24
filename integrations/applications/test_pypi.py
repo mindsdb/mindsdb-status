@@ -23,7 +23,7 @@ class TestPyPIConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("PyPI", "clmt4gm0n12728b8n3e6nkz55p")
+            cloud_temp = self.template.get_integration_template("PyPI", "clo48iowo11612ben9rmq0qrgs")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
