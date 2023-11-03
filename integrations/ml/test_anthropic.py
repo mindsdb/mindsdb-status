@@ -25,7 +25,7 @@ class TestAnthropicConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Anthropic", "clktqxt8o55593bxohrv6fcswq")
+            cloud_temp = self.template.get_integration_template("Anthropic", "cloik7rx01436bcoj26wervhl")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 if __name__ == "__main__":
