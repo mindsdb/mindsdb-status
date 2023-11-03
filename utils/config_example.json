@@ -225,6 +225,9 @@
     "dockerhub": {
       "username": "mocked_username",
       "password": "mocked_password"
+    },
+    "anthroic": {
+      "api_key": "mocked_api_key"
     }
 }
   
