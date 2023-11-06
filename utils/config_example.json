@@ -230,11 +230,13 @@
       "api_key": "mocked_api_key"
     },
     "plaid":{
-      "plaid": {
       "client_id": "mocked_client", 
       "secret": "mocked_secret", 
       "access_token": "access-sandbox-",
       "plaid_env": "sandbox"
+    },
+    "chromadb": {
+      "persist_directory": "mocked_persist_directory"
     }
 }
   
