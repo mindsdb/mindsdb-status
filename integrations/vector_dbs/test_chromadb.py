@@ -24,7 +24,7 @@ class TestChromaDBConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("ChromaDB", "cln1kmzmy130779bbmzwsz7yepe")
+            cloud_temp = self.template.get_integration_template("ChromaDB", "clomq9sol222587bkokhlsaiick")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
