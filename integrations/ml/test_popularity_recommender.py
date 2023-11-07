@@ -15,12 +15,11 @@ class TestPopularityRecommenderConnection(BaseTest):
         try:
             cursor = self.connection.cursor()
             random_db_name = generate_random_db_name("popularity_recommender_engine")
-            popularity_recommender_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'popularity_recommender')
             query = self.query_generator.create_ml_engine_query(
-                        random_db_name,
-                        "popularity_recommender",
-                        popularity_recommender_config
-                    )
+                random_db_name,
+                "popularity_recommender",
+                {}
+            )
             cursor.execute(query)
             cursor.close()
         except Exception as err:
