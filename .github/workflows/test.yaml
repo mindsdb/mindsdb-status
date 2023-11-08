@@ -69,7 +69,6 @@ jobs:
         INTEGRATIONS_CONFIG: ${{ secrets.INTEGRATIONS_CONFIG }}
       run: |
         source venv/bin/activate
-        
         python -m unittest integrations/applications/test_youtube.py
         python -m unittest integrations/applications/test_github.py
         python -m unittest integrations/applications/test_shopify.py
@@ -83,3 +82,4 @@ jobs:
         python -m unittest integrations/test_plaid.py
         python -m unittest integrations/test_pypi.py
         python -m unittest integrations/test_newsapi.py
+        python -m unittest integrations/test_gitlab.py
