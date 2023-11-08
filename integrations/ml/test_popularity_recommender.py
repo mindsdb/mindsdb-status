@@ -23,7 +23,7 @@ class TestPopularityRecommenderConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Popularity Recommender", "cloik7rx01436bcoj26wervhl")
+            cloud_temp = self.template.get_integration_template("Popularity Recommender", "clopl6fjy0499bhn56cf113zn")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 if __name__ == "__main__":
