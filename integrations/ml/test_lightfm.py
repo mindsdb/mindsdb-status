@@ -23,7 +23,7 @@ class TestLightFMConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("LightFM", "clopl6fjy0499bhn56cf113zn")
+            cloud_temp = self.template.get_integration_template("LightFM", "clor6i4bi8704bkn4pvdfai6p")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 if __name__ == "__main__":
