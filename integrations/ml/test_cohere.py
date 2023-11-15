@@ -24,7 +24,7 @@ class TestCohereConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("Cohere", "clor6i4bi8704bkn4pvdfai6p")
+            cloud_temp = self.template.get_integration_template("Cohere", "clp00twex129245b8n6j5saiacc")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 if __name__ == "__main__":
