@@ -15,10 +15,10 @@ class TestQuestDBConnection(BaseTest):
         try:
             cursor = self.connection.cursor()
             random_db_name = generate_random_db_name("questdb_datasource")
-            questdb_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'QuestDB')
+            questdb_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'questdb')
             query = self.query_generator.create_database_query(
                 random_db_name,
-                "planet_scale",
+                "questdb",
                 questdb_config
             )
             cursor.execute(query)
