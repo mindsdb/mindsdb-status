@@ -51,35 +51,18 @@ jobs:
         INTEGRATIONS_CONFIG: ${{ secrets.INTEGRATIONS_CONFIG }}
       run: |
         source venv/bin/activate
-        python -m unittest integrations/test_mysql.py
-        python -m unittest integrations/test_postgresql.py 
-        python -m unittest integrations/test_clickhouse.py
-        python -m unittest integrations/test_mariadb.py
-        python -m unittest integrations/test_mongodb.py
-        python -m unittest integrations/test_amazon_aurora.py
-        python -m unittest integrations/test_snowflake.py
-        python -m unittest integrations/test_mssql.py
-        python -m unittest integrations/test_surrealdb.py
-        python -m unittest integrations/test_cassandra.py
-        python -m unittest integrations/test_scylladb.py
-        python -m unittest integrations/test_couchbase.py
+        python -m unittest discover -s integrations/dbs/
 
     - name: Run MindsDB Application Integrations Tests
       env:
         INTEGRATIONS_CONFIG: ${{ secrets.INTEGRATIONS_CONFIG }}
       run: |
         source venv/bin/activate
-        python -m unittest integrations/applications/test_youtube.py
-        python -m unittest integrations/applications/test_github.py
-        python -m unittest integrations/applications/test_shopify.py
-        python -m unittest integrations/applications/test_binance.py
-        python -m unittest integrations/applications/test_slack.py
-        python -m unittest integrations/applications/test_stripe.py       
-        python -m unittest integrations/applications/test_mediawiki.py
-        python -m unittest integrations/applications/test_hackernews.py
-        python -m unittest integrations/applications/test_email.py
-        python -m unittest integrations/applications/test_webcrawler.py
-        python -m unittest integrations/test_plaid.py
-        python -m unittest integrations/test_pypi.py
-        python -m unittest integrations/test_newsapi.py
-        python -m unittest integrations/test_gitlab.py
+        python -m unittest discover -s integrations/applications/
+
+    - name: Run MindsDB Vector DB Integrations Tests
+      env:
+        INTEGRATIONS_CONFIG: ${{ secrets.INTEGRATIONS_CONFIG }}
+      run: |
+        source venv/bin/activate
+        python -m unittest discover -s integrations/vector_dbs/
