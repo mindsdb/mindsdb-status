@@ -79,7 +79,7 @@ jobs:
         python -m unittest integrations/applications/test_hackernews.py
         python -m unittest integrations/applications/test_email.py
         python -m unittest integrations/applications/test_webcrawler.py
-        python -m unittest integrations/test_plaid.py
-        python -m unittest integrations/test_pypi.py
-        python -m unittest integrations/test_newsapi.py
-        python -m unittest integrations/test_gitlab.py
+        python -m unittest integrations/applications/test_plaid.py
+        python -m unittest integrations/applications/test_pypi.py
+        python -m unittest integrations/applications/test_newsapi.py
+        python -m unittest integrations/applications/test_gitlab.py
