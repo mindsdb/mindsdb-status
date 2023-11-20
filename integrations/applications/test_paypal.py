@@ -17,10 +17,10 @@ class TestPayPalConnection(BaseTest):
             random_db_name = generate_random_db_name("paypal_datasource")
             paypal_config = get_value_from_json_env_var("INTEGRATIONS_CONFIG", 'paypal')
             query = self.query_generator.create_database_query(
-                        random_db_name,
-                        "paypal",
-                        paypal_config
-                    )
+                random_db_name,
+                "paypal",
+                paypal_config
+            )
             cursor.execute(query)
             cursor.close()
         except Exception as err:
