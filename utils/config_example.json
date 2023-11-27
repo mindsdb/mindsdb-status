@@ -240,6 +240,14 @@
     },
     "cohere": {
       "api_key": "mocked_api_key"
+    },
+    "opengauss": {
+      "user": "mocked_value",
+      "password": "mocked_value",
+      "host": "mocked_value",
+      "port": "mocked_value",
+      "database": "mocked_value",
+      "schema": "mocked_value"
     }
 }
   
