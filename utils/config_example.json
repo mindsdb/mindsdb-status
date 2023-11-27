@@ -241,7 +241,7 @@
     "cohere": {
       "api_key": "mocked_api_key"
     },
-    "opengauss": {
+    "orioledb": {
       "user": "mocked_value",
       "password": "mocked_value",
       "host": "mocked_value",
