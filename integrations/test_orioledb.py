@@ -24,7 +24,7 @@ class TestOrioleDBConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("OrioleDB", "cll41e2to1892b7o8xquc22d2")
+            cloud_temp = self.template.get_integration_template("OrioleDB", "clpqqtfb5119825b3ohe6gck4xs")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
