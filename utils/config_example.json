@@ -240,6 +240,13 @@
     },
     "cohere": {
       "api_key": "mocked_api_key"
+    },
+    "questdb": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "database": "mocked_database"
     }
 }
   
