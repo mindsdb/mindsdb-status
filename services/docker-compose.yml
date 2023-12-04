@@ -1,6 +1,14 @@
 version: "3.8"
 
 services:
+  orioledb:
+    image: orioledb/orioledb:latest-pg16
+    container_name: orioledb
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_INITDB_ARGS: "--locale=C"
   apacheignite:
     image: apacheignite/ignite
     container_name: apacheignite
@@ -23,7 +31,7 @@ services:
     - 5433:5432
     command: postgres -c config_file=/etc/postgressql/postgressql.conf
     environment:
-      POSTGRES_PASSWROD: postgres
+      POSTGRES_PASSWORD: postgres
   couchbase:
     image: couchbase
     container_name: db

@@ -241,6 +241,14 @@
     "cohere": {
       "api_key": "mocked_api_key"
     },
+    "orioledb": {
+      "user": "mocked_value",
+      "password": "mocked_value",
+      "host": "mocked_value",
+      "port": "mocked_value",
+      "database": "mocked_value",
+      "schema": "mocked_value"
+    },
     "paypal": {
       "client_id": "mocked_client_id",
       "client_secret": "mocked_client_secret",
