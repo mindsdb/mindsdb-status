@@ -24,7 +24,7 @@ class TestPayPalConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("PayPal", "clo48noho15824bln910dtac95")
+            cloud_temp = self.template.get_integration_template("PayPal", "clpqqhs51112000b3ohx5a6766t")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
