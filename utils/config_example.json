@@ -241,6 +241,11 @@
     "cohere": {
       "api_key": "mocked_api_key"
     },
+    "paypal": {
+      "client_id": "mocked_client_id",
+      "client_secret": "mocked_client_secret",
+      "mode": "mocked_mode"
+    },
     "questdb": {
       "host": "mocked_host",
       "port": "mocked_port",
