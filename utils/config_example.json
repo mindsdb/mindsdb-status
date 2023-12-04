@@ -245,6 +245,13 @@
       "client_id": "mocked_client_id",
       "client_secret": "mocked_client_secret",
       "mode": "mocked_mode"
+    },
+    "questdb": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "database": "mocked_database"
     }
 }
   

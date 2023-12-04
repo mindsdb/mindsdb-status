@@ -3,7 +3,7 @@ name: MindsDB Cloud Tests
 on:
   # Triggers the workflow every day at 1 and 13:00 UTC
   schedule:
-    - cron:  '0 3,15 * * *'
+    - cron:  '0 3 * * *'
 
 jobs:
   run_tests:
@@ -79,7 +79,14 @@ jobs:
         python -m unittest integrations/applications/test_hackernews.py
         python -m unittest integrations/applications/test_email.py
         python -m unittest integrations/applications/test_webcrawler.py
-        python -m unittest integrations/test_plaid.py
-        python -m unittest integrations/test_pypi.py
-        python -m unittest integrations/test_newsapi.py
-        python -m unittest integrations/test_gitlab.py
+        python -m unittest integrations/applications/test_plaid.py
+        python -m unittest integrations/applications/test_pypi.py
+        python -m unittest integrations/applications/test_newsapi.py
+        python -m unittest integrations/applications/test_gitlab.py
+
+    - name: Run MindsDB Vector DB Integrations Tests
+      env:
+        INTEGRATIONS_CONFIG: ${{ secrets.INTEGRATIONS_CONFIG }}
+      run: |
+        source venv/bin/activate
+        python -m unittest discover -s integrations/vector_dbs/

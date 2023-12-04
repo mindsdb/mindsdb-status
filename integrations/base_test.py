@@ -21,10 +21,12 @@ class BaseTest(unittest.TestCase):
             cloud_temp = self.template.get_cloud_sql_api_template()
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
                 self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
+                self.logger.error(f"Access denied for user: {config['user']}")
             elif err.errno == errorcode.ER_BAD_DB_ERROR:
-                print("Database does not exist")
+                self.logger.error(f"Database does not exist: {config['database']}")
             else:
                 self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
+                self.logger.error(f"Connection could not be established: {err}")
 
     def tearDown(self):
         if self.connection.is_connected():
@@ -37,4 +39,5 @@ class BaseTest(unittest.TestCase):
         if not self.connection.is_connected():
             cloud_temp = self.template.get_cloud_sql_api_template()
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
+            raise Exception("Connection has not been established")
 
