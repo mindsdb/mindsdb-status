@@ -24,7 +24,7 @@ class TestQuestDBConnection(BaseTest):
             cursor.execute(query)
             cursor.close()
         except Exception as err:
-            cloud_temp = self.template.get_integration_template("QuestDB", "cln1kmzmy130779bbmzwsz7yepe")
+            cloud_temp = self.template.get_integration_template("QuestDB", "clpqqft2n115506baohwbt7rx2t")
             self.incident.report_incident("cl8nll9f7106187olof1m17eg17", cloud_temp)
 
 
