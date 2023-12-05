@@ -218,6 +218,48 @@
           "FileHeaderInfo": "mocked_file_header_info"
         }
       }
+    },
+    "newsapi": {
+      "api_key": "mocked_api_key"
+    },
+    "dockerhub": {
+      "username": "mocked_username",
+      "password": "mocked_password"
+    },
+    "anthroic": {
+      "api_key": "mocked_api_key"
+    },
+    "plaid":{
+      "client_id": "mocked_client", 
+      "secret": "mocked_secret", 
+      "access_token": "access-sandbox-",
+      "plaid_env": "sandbox"
+    },
+    "chromadb": {
+      "persist_directory": "mocked_persist_directory"
+    },
+    "cohere": {
+      "api_key": "mocked_api_key"
+    },
+    "orioledb": {
+      "user": "mocked_value",
+      "password": "mocked_value",
+      "host": "mocked_value",
+      "port": "mocked_value",
+      "database": "mocked_value",
+      "schema": "mocked_value"
+    },
+    "paypal": {
+      "client_id": "mocked_client_id",
+      "client_secret": "mocked_client_secret",
+      "mode": "mocked_mode"
+    },
+    "questdb": {
+      "host": "mocked_host",
+      "port": "mocked_port",
+      "user": "mocked_user",
+      "password": "mocked_password",
+      "database": "mocked_database"
     }
 }
   
