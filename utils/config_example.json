@@ -260,6 +260,13 @@
       "user": "mocked_user",
       "password": "mocked_password",
       "database": "mocked_database"
+    },
+    "impala": {
+      "user":"root",
+      "password":"p@55w0rd",
+      "host":"172.17.0.2",
+      "port":21050,
+      "database":"mocked_database"
     }
 }
   
