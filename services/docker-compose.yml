@@ -73,3 +73,12 @@ services:
       - "9009:9009"
       - "8812:8812"
       - "9003:9003"
+  kudu-impala:
+    image: apache/kudu:impala-latest
+    ports:
+      - "21000:21000"
+      - "21050:21050"
+      - "25000:25000"
+      - "25010:25010"
+      - "25020:25020"
+    container_name: impala
